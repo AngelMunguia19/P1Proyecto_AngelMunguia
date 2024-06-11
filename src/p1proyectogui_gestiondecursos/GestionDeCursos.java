@@ -9,5 +9,5 @@ package p1proyectogui_gestiondecursos;
  * @author Usuario
  */
 public class GestionDeCursos {
-    
+    private String curso;
 }
