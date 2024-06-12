@@ -17,6 +17,7 @@ public class Gestion extends javax.swing.JFrame {
      */
     public Gestion() {
         initComponents();
+
     }
 
     /**
@@ -39,7 +40,7 @@ public class Gestion extends javax.swing.JFrame {
         jRadioButton9 = new javax.swing.JRadioButton();
         jLabel18 = new javax.swing.JLabel();
         jRadioButton10 = new javax.swing.JRadioButton();
-        Regresar1 = new javax.swing.JButton();
+        Guardar2 = new javax.swing.JButton();
         InfoMaestros = new javax.swing.JDialog();
         InfoProfesores = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -51,7 +52,7 @@ public class Gestion extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jRadioButton2 = new javax.swing.JRadioButton();
-        Regresar2 = new javax.swing.JButton();
+        Guardar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
@@ -62,7 +63,7 @@ public class Gestion extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        InfoEtudiantes2.setBackground(new java.awt.Color(216, 69, 69));
+        InfoEtudiantes2.setBackground(new java.awt.Color(168, 191, 255));
 
         jLabel15.setBackground(new java.awt.Color(255, 255, 255));
         jLabel15.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -91,6 +92,7 @@ public class Gestion extends javax.swing.JFrame {
         Edad.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Edad.setForeground(new java.awt.Color(0, 0, 0));
 
+        jRadioButton9.setBackground(new java.awt.Color(168, 191, 255));
         buttonGroup1.add(jRadioButton9);
         jRadioButton9.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         jRadioButton9.setForeground(new java.awt.Color(0, 0, 0));
@@ -107,6 +109,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Sexo");
 
+        jRadioButton10.setBackground(new java.awt.Color(168, 191, 255));
         buttonGroup1.add(jRadioButton10);
         jRadioButton10.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         jRadioButton10.setForeground(new java.awt.Color(0, 0, 0));
@@ -117,14 +120,19 @@ public class Gestion extends javax.swing.JFrame {
             }
         });
 
-        Regresar1.setBackground(new java.awt.Color(122, 122, 255));
-        Regresar1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
-        Regresar1.setForeground(new java.awt.Color(0, 0, 0));
-        Regresar1.setText("Regresar al Menu");
-        Regresar1.setBorder(new javax.swing.border.MatteBorder(null));
-        Regresar1.addActionListener(new java.awt.event.ActionListener() {
+        Guardar2.setBackground(new java.awt.Color(51, 51, 255));
+        Guardar2.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        Guardar2.setForeground(new java.awt.Color(204, 204, 204));
+        Guardar2.setText("Guardar");
+        Guardar2.setBorder(new javax.swing.border.MatteBorder(null));
+        Guardar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Guardar2MouseClicked(evt);
+            }
+        });
+        Guardar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Regresar1ActionPerformed(evt);
+                Guardar2ActionPerformed(evt);
             }
         });
 
@@ -150,7 +158,7 @@ public class Gestion extends javax.swing.JFrame {
                             .addComponent(jLabel18)))
                     .addGroup(InfoEtudiantes2Layout.createSequentialGroup()
                         .addGap(275, 275, 275)
-                        .addComponent(Regresar1)))
+                        .addComponent(Guardar2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         InfoEtudiantes2Layout.setVerticalGroup(
@@ -175,8 +183,8 @@ public class Gestion extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
-                .addComponent(Regresar1)
-                .addGap(120, 120, 120))
+                .addComponent(Guardar2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109))
         );
 
         javax.swing.GroupLayout InfoEstudiantesLayout = new javax.swing.GroupLayout(InfoEstudiantes.getContentPane());
@@ -190,7 +198,7 @@ public class Gestion extends javax.swing.JFrame {
             .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        InfoProfesores.setBackground(new java.awt.Color(255, 255, 255));
+        InfoProfesores.setBackground(new java.awt.Color(168, 191, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -219,6 +227,7 @@ public class Gestion extends javax.swing.JFrame {
         EdadPr.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         EdadPr.setForeground(new java.awt.Color(0, 0, 0));
 
+        jRadioButton1.setBackground(new java.awt.Color(168, 191, 255));
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(0, 0, 0));
@@ -234,6 +243,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Sexo");
 
+        jRadioButton2.setBackground(new java.awt.Color(168, 191, 255));
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(0, 0, 0));
@@ -244,14 +254,14 @@ public class Gestion extends javax.swing.JFrame {
             }
         });
 
-        Regresar2.setBackground(new java.awt.Color(122, 122, 255));
-        Regresar2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
-        Regresar2.setForeground(new java.awt.Color(0, 0, 0));
-        Regresar2.setText("Regresar al Menu");
-        Regresar2.setBorder(new javax.swing.border.MatteBorder(null));
-        Regresar2.addActionListener(new java.awt.event.ActionListener() {
+        Guardar.setBackground(new java.awt.Color(51, 51, 255));
+        Guardar.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        Guardar.setForeground(new java.awt.Color(204, 204, 204));
+        Guardar.setText("Guardar");
+        Guardar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 255)));
+        Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Regresar2ActionPerformed(evt);
+                GuardarActionPerformed(evt);
             }
         });
 
@@ -260,6 +270,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Estado Civil");
 
+        jRadioButton5.setBackground(new java.awt.Color(168, 191, 255));
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(0, 0, 0));
@@ -270,6 +281,7 @@ public class Gestion extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton6.setBackground(new java.awt.Color(168, 191, 255));
         buttonGroup1.add(jRadioButton6);
         jRadioButton6.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         jRadioButton6.setForeground(new java.awt.Color(0, 0, 0));
@@ -299,29 +311,30 @@ public class Gestion extends javax.swing.JFrame {
         InfoProfesoresLayout.setHorizontalGroup(
             InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(NProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(Nidentidad2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(190, 190, 190)
-                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(EdadPr, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel10)
-                    .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InfoProfesoresLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(NProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(Nidentidad2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5)
+                            .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(190, 190, 190)
+                        .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(EdadPr, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel10)
+                            .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(InfoProfesoresLayout.createSequentialGroup()
+                        .addGap(284, 284, 284)
+                        .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoProfesoresLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Regresar2)
-                .addGap(283, 283, 283))
         );
         InfoProfesoresLayout.setVerticalGroup(
             InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,9 +367,9 @@ public class Gestion extends javax.swing.JFrame {
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addComponent(Regresar2)
-                .addGap(60, 60, 60))
+                .addGap(45, 45, 45)
+                .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout InfoMaestrosLayout = new javax.swing.GroupLayout(InfoMaestros.getContentPane());
@@ -372,24 +385,24 @@ public class Gestion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Principal.setBackground(new java.awt.Color(211, 67, 67));
+        Principal.setBackground(new java.awt.Color(153, 153, 255));
 
-        jButton1.setBackground(new java.awt.Color(122, 122, 255));
-        jButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setBackground(new java.awt.Color(51, 51, 255));
+        jButton1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(204, 204, 204));
         jButton1.setText("Agregar estudiante");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 0, 204)));
+        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 102)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(122, 122, 255));
-        jButton2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setBackground(new java.awt.Color(51, 51, 255));
+        jButton2.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(204, 204, 204));
         jButton2.setText("Agregar Profesor");
-        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 0, 204)));
+        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 51)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -402,19 +415,19 @@ public class Gestion extends javax.swing.JFrame {
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrincipalLayout.createSequentialGroup()
                 .addGap(275, 275, 275)
-                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(296, Short.MAX_VALUE))
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrincipalLayout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -471,19 +484,32 @@ public class Gestion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TelefonoActionPerformed
 
-    private void Regresar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar2ActionPerformed
+    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
 
-    }//GEN-LAST:event_Regresar2ActionPerformed
+    }//GEN-LAST:event_GuardarActionPerformed
 
-    private void Regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar1ActionPerformed
+    private void Guardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar2ActionPerformed
 
-    }//GEN-LAST:event_Regresar1ActionPerformed
+    }//GEN-LAST:event_Guardar2ActionPerformed
+
+    private void Guardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar2MouseClicked
+        DefaultTreeModel treemodel =(DefaltTreeModel) this.tree.getModel();
+        
+        
+        String estudiante = NomEstudiante.getText();
+        String identidad = Nidentida.getText();
+        String edad = Edad.getText();
+
+    }//GEN-LAST:event_Guardar2MouseClicked
 
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Gestion().setVisible(true);
+                Gestion principal = new Gestion();
+                principal.pack();
+                principal.setLocationRelativeTo(null);
+                principal.setVisible(true);
 
             }
         });
@@ -492,6 +518,8 @@ public class Gestion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Edad;
     private javax.swing.JTextField EdadPr;
+    private javax.swing.JButton Guardar;
+    private javax.swing.JButton Guardar2;
     private javax.swing.JDialog InfoEstudiantes;
     private javax.swing.JPanel InfoEtudiantes2;
     private javax.swing.JDialog InfoMaestros;
@@ -501,8 +529,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JTextField Nidentidad2;
     private javax.swing.JTextField NomEstudiante;
     private javax.swing.JPanel Principal;
-    private javax.swing.JButton Regresar1;
-    private javax.swing.JButton Regresar2;
     private javax.swing.JTextField Telefono;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;

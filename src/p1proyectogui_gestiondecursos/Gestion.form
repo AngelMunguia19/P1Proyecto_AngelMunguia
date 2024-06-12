@@ -20,14 +20,14 @@
         <Container class="javax.swing.JPanel" name="InfoEtudiantes2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="45" green="45" red="d8" type="rgb"/>
+              <Color blue="ff" green="bf" red="a8" type="rgb"/>
             </Property>
           </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -48,7 +48,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
-                              <Component id="Regresar1" min="-2" max="-2" attributes="0"/>
+                              <Component id="Guardar2" min="-2" pref="176" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="12" max="32767" attributes="0"/>
@@ -81,8 +81,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jRadioButton10" min="-2" pref="27" max="-2" attributes="0"/>
                       <EmptySpace pref="103" max="32767" attributes="0"/>
-                      <Component id="Regresar1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      <Component id="Guardar2" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -171,6 +171,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton9">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
+                </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
@@ -209,6 +212,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton10">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
+                </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
@@ -224,18 +230,18 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="Regresar1">
+            <Component class="javax.swing.JButton" name="Guardar2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="7a" red="7a" type="rgb"/>
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="MS Reference Sans Serif" size="18" style="0"/>
+                  <Font name="Eras Demi ITC" size="18" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Regresar al Menu"/>
+                <Property name="text" type="java.lang.String" value="Guardar"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                     <MatteColorBorder/>
@@ -243,7 +249,8 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Regresar1ActionPerformed"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Guardar2MouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Guardar2ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -268,40 +275,43 @@
         <Container class="javax.swing.JPanel" name="InfoProfesores">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color blue="ff" green="bf" red="a8" type="rgb"/>
             </Property>
           </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="NProfesor" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Nidentidad2" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton6" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="jRadioButton5" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="EdadPr" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Telefono" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NProfesor" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Nidentidad2" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton2" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jRadioButton6" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton5" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EdadPr" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Telefono" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="Guardar" min="-2" pref="176" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="Regresar2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -343,9 +353,9 @@
                           <Component id="jRadioButton2" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                           <Component id="jRadioButton6" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
-                      <Component id="Regresar2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Guardar" min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -434,6 +444,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton1">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
+                </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
@@ -465,6 +478,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton2">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
+                </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
@@ -480,26 +496,28 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="Regresar2">
+            <Component class="javax.swing.JButton" name="Guardar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="7a" red="7a" type="rgb"/>
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="MS Reference Sans Serif" size="18" style="0"/>
+                  <Font name="Eras Demi ITC" size="18" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Regresar al Menu"/>
+                <Property name="text" type="java.lang.String" value="Guardar"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder/>
+                    <MatteColorBorder>
+                      <Color PropertyName="color" blue="ff" green="66" red="66" type="rgb"/>
+                    </MatteColorBorder>
                   </Border>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Regresar2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
@@ -518,6 +536,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton5">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
+                </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
@@ -535,6 +556,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton6">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
+                </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
@@ -622,7 +646,7 @@
     <Container class="javax.swing.JPanel" name="Principal">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="43" green="43" red="d3" type="rgb"/>
+          <Color blue="ff" green="99" red="99" type="rgb"/>
         </Property>
       </Properties>
 
@@ -631,9 +655,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton2" min="-2" pref="187" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="187" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jButton2" pref="187" max="32767" attributes="0"/>
+                      <Component id="jButton1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="296" max="32767" attributes="0"/>
               </Group>
@@ -643,10 +667,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="251" max="32767" attributes="0"/>
+                  <Component id="jButton1" min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jButton2" min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace pref="235" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -655,19 +679,19 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="7a" red="7a" type="rgb"/>
+              <Color blue="ff" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="MS Reference Sans Serif" size="18" style="0"/>
+              <Font name="Eras Demi ITC" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Agregar estudiante"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                 <MatteColorBorder bottom="2" left="2" right="0" top="2">
-                  <Color PropertyName="color" blue="cc" green="0" red="0" type="rgb"/>
+                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
                 </MatteColorBorder>
               </Border>
             </Property>
@@ -679,19 +703,19 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="7a" red="7a" type="rgb"/>
+              <Color blue="ff" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="MS Reference Sans Serif" size="18" style="0"/>
+              <Font name="Eras Demi ITC" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Agregar Profesor"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                 <MatteColorBorder bottom="2" left="2" right="0" top="2">
-                  <Color PropertyName="color" blue="cc" green="0" red="0" type="rgb"/>
+                  <Color PropertyName="color" blue="33" green="66" red="0" type="rgb"/>
                 </MatteColorBorder>
               </Border>
             </Property>
