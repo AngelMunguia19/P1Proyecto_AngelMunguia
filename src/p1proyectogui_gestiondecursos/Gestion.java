@@ -37,10 +37,9 @@ public class Gestion extends javax.swing.JFrame {
         Nidentida = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         Edad = new javax.swing.JTextField();
-        jRadioButton9 = new javax.swing.JRadioButton();
         jLabel18 = new javax.swing.JLabel();
-        jRadioButton10 = new javax.swing.JRadioButton();
         Guardar2 = new javax.swing.JButton();
+        Genero = new javax.swing.JComboBox<>();
         InfoMaestros = new javax.swing.JDialog();
         InfoProfesores = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -126,33 +125,10 @@ public class Gestion extends javax.swing.JFrame {
         Edad.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Edad.setForeground(new java.awt.Color(0, 0, 0));
 
-        jRadioButton9.setBackground(new java.awt.Color(168, 191, 255));
-        buttonGroup1.add(jRadioButton9);
-        jRadioButton9.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton9.setText("Femenino");
-        jRadioButton9.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
-            }
-        });
-
         jLabel18.setBackground(new java.awt.Color(255, 255, 255));
         jLabel18.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Sexo");
-
-        jRadioButton10.setBackground(new java.awt.Color(168, 191, 255));
-        buttonGroup1.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton10.setText("Masculino");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
-            }
-        });
 
         Guardar2.setBackground(new java.awt.Color(51, 51, 255));
         Guardar2.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
@@ -167,6 +143,15 @@ public class Gestion extends javax.swing.JFrame {
         Guardar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Guardar2ActionPerformed(evt);
+            }
+        });
+
+        Genero.setBackground(new java.awt.Color(153, 180, 255));
+        Genero.setForeground(new java.awt.Color(0, 0, 0));
+        Genero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
+        Genero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GeneroActionPerformed(evt);
             }
         });
 
@@ -185,11 +170,10 @@ public class Gestion extends javax.swing.JFrame {
                             .addComponent(Nidentida, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(190, 190, 190)
                         .addGroup(InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16)
-                            .addComponent(jLabel18)))
+                            .addComponent(jLabel18)
+                            .addComponent(Genero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(InfoEtudiantes2Layout.createSequentialGroup()
                         .addGap(275, 275, 275)
                         .addComponent(Guardar2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -210,13 +194,11 @@ public class Gestion extends javax.swing.JFrame {
                 .addGroup(InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, 2)
+                .addGap(3, 3, 3)
                 .addGroup(InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nidentida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                    .addComponent(Genero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addComponent(Guardar2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(109, 109, 109))
         );
@@ -861,14 +843,6 @@ public class Gestion extends javax.swing.JFrame {
         InfoMaestros.setLocationRelativeTo(null);
     }//GEN-LAST:event_AggProfesorActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
-
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
-
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
@@ -898,11 +872,10 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_Guardar2ActionPerformed
 
     private void Guardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar2MouseClicked
-
-        String nombre = NomEstudiante.getText();
-        String identidad = Nidentida.getText();
-        String edad = Edad.getText();
-
+        Alumnos x = new Alumnos();
+        x.setNombre(NomEstudiante.getText());
+        x.setIdentidad(Integer.parseInt(Nidentida.getText()));
+        x.setSexo(Genero.getSelectedItem().toString());
     }//GEN-LAST:event_Guardar2MouseClicked
 
     private void AggCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AggCursoActionPerformed
@@ -965,6 +938,10 @@ public class Gestion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void GeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GeneroActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -996,6 +973,7 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JTextField Edad1;
     private javax.swing.JTextField Edad2;
     private javax.swing.JTextField EdadPr;
+    private javax.swing.JComboBox<String> Genero;
     private javax.swing.JButton Guardar;
     private javax.swing.JButton Guardar2;
     private javax.swing.JButton Guardar3;
@@ -1050,7 +1028,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JList<String> jList4;
     private javax.swing.JList<String> jList5;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton12;
     private javax.swing.JRadioButton jRadioButton13;
@@ -1058,7 +1035,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

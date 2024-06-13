@@ -11,34 +11,33 @@ import java.util.ArrayList;
  * @author Usuario
  */
 public class Alumnos {
-    private int NumCuenta;
     private String nombre;
-    private String profesor;
-    private int calificaciones;
-    private String identidad;
-    private ArrayList<String> estudiantes;
+    private String sexo;
+    private int identidad;
 
-    public Alumnos(String nombre, String profesor, int NumCuenta) {
+    public Alumnos() {
+    }
+
+    public Alumnos(String nombre, String sexo, int identidad) {
         this.nombre = nombre;
-        this.calificaciones = calificaciones;
-        this.NumCuenta = NumCuenta;
-        this.estudiantes = new ArrayList<>();
+        this.sexo = sexo;
+        this.identidad = identidad;
     }
 
-    public ArrayList<String> getEstudiantes() {
-        return estudiantes;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setEstudiantes(ArrayList<String> estudiantes) {
-        this.estudiantes = estudiantes;
-    }
-    
-    public int getNumCuenta() {
-        return NumCuenta;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
-    public void setNumCuenta(int NumCuenta) {
-        this.NumCuenta = NumCuenta;
+    public int getIdentidad() {
+        return identidad;
+    }
+
+    public void setIdentidad(int identidad) {
+        this.identidad = identidad;
     }
     
     public String getNombre() {
@@ -48,20 +47,4 @@ public class Alumnos {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public String getProfesor() {
-        return profesor;
-    }
-
-    public void setProfesor(String profesor) {
-        this.profesor = profesor;
-    }
-
-    public int getCalificaciones() {
-        return calificaciones;
-    }
-
-    public void setCalificaciones(int calificaciones) {
-        this.calificaciones = calificaciones;
-    }  
 }

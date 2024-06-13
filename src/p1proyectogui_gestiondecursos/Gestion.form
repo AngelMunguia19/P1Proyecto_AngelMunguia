@@ -39,11 +39,10 @@
                               </Group>
                               <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jRadioButton10" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton9" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                                   <Component id="Edad" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
                                   <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Genero" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -73,14 +72,12 @@
                           <Component id="jLabel17" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           <Component id="jLabel18" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Nidentida" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton9" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="Genero" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jRadioButton10" min="-2" pref="27" max="-2" attributes="0"/>
-                      <EmptySpace pref="103" max="32767" attributes="0"/>
+                      <EmptySpace pref="138" max="32767" attributes="0"/>
                       <Component id="Guardar2" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                   </Group>
@@ -169,33 +166,6 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton9">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
-                </Property>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup1"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="MS Reference Sans Serif" size="14" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Femenino"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder>
-                      <Color PropertyName="color" blue="ff" green="99" red="99" type="rgb"/>
-                    </MatteColorBorder>
-                  </Border>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -209,26 +179,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sexo"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton10">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="bf" red="a8" type="rgb"/>
-                </Property>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroup1"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="MS Reference Sans Serif" size="14" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Masculino"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Guardar2">
               <Properties>
@@ -252,6 +202,28 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Guardar2MouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Guardar2ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="Genero">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="b4" red="99" type="rgb"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="Femenino"/>
+                    <StringItem index="1" value="Masculino"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GeneroActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
