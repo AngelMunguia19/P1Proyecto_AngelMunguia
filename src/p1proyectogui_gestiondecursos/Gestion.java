@@ -50,15 +50,13 @@ public class Gestion extends javax.swing.JFrame {
         Nidentidad2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         EdadPr = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
         Guardar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
         Telefono = new javax.swing.JTextField();
+        genero = new javax.swing.JComboBox<>();
+        Estado = new javax.swing.JComboBox<>();
         buttonGroup1 = new javax.swing.ButtonGroup();
         AggCursos = new javax.swing.JDialog();
         InfoEtudiantes3 = new javax.swing.JPanel();
@@ -73,7 +71,7 @@ public class Gestion extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        ListaProfes = new javax.swing.JList<>();
         jLabel28 = new javax.swing.JLabel();
         Cursos = new javax.swing.JDialog();
         InfoEtudiantes7 = new javax.swing.JPanel();
@@ -250,32 +248,10 @@ public class Gestion extends javax.swing.JFrame {
         EdadPr.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         EdadPr.setForeground(new java.awt.Color(0, 0, 0));
 
-        jRadioButton1.setBackground(new java.awt.Color(168, 191, 255));
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton1.setText("Femenino");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Sexo");
-
-        jRadioButton2.setBackground(new java.awt.Color(168, 191, 255));
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton2.setText("Masculino");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
 
         Guardar.setBackground(new java.awt.Color(51, 51, 255));
         Guardar.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
@@ -298,28 +274,6 @@ public class Gestion extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Estado Civil");
 
-        jRadioButton5.setBackground(new java.awt.Color(168, 191, 255));
-        buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton5.setText("Soltero");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton6.setBackground(new java.awt.Color(168, 191, 255));
-        buttonGroup1.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        jRadioButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton6.setText("En pareja");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
-            }
-        });
-
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -333,6 +287,14 @@ public class Gestion extends javax.swing.JFrame {
                 TelefonoActionPerformed(evt);
             }
         });
+
+        genero.setBackground(new java.awt.Color(153, 204, 255));
+        genero.setForeground(new java.awt.Color(0, 0, 0));
+        genero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+
+        Estado.setBackground(new java.awt.Color(153, 204, 255));
+        Estado.setForeground(new java.awt.Color(0, 0, 0));
+        Estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En pareja", "Soltero" }));
 
         javax.swing.GroupLayout InfoProfesoresLayout = new javax.swing.GroupLayout(InfoProfesores);
         InfoProfesores.setLayout(InfoProfesoresLayout);
@@ -348,19 +310,18 @@ public class Gestion extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(Nidentidad2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
-                            .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(190, 190, 190)
                         .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)
                             .addComponent(EdadPr, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel10)
-                            .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(Estado, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                        .addGap(284, 284, 284)
+                        .addGap(272, 272, 272)
                         .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -388,16 +349,12 @@ public class Gestion extends javax.swing.JFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                    .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(80, 80, 80)
                 .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout InfoMaestrosLayout = new javax.swing.GroupLayout(InfoMaestros.getContentPane());
@@ -531,13 +488,8 @@ public class Gestion extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jList2.setBackground(new java.awt.Color(204, 204, 204));
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList2);
+        ListaProfes.setBackground(new java.awt.Color(204, 204, 204));
+        jScrollPane2.setViewportView(ListaProfes);
 
         jLabel28.setBackground(new java.awt.Color(255, 255, 255));
         jLabel28.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
@@ -851,22 +803,6 @@ public class Gestion extends javax.swing.JFrame {
         InfoMaestros.setLocationRelativeTo(null);
     }//GEN-LAST:event_AggProfesorActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
-
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
-
     private void TelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TelefonoActionPerformed
@@ -890,21 +826,16 @@ public class Gestion extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(InfoEstudiantes, "Llene todos los campos");
         } else {
 
-            //TOMAR EL MODELO DE LA LISTA
             DefaultListModel model = (DefaultListModel) ListaEstudiantes.getModel();
 
-            //AGREGAR A LA LISTA
             model.addElement(x);
-
-            //MANDAR LOS DATOS AL MODELO
             ListaEstudiantes.setModel(model);
 
-            //LIMPIAR
             NomEstudiante.setText("");
             Edad.setText("");
             Genero.setSelectedIndex(0);
             Nidentida.setText("");
-            JOptionPane.showMessageDialog(InfoEstudiantes, "El jugador se agrego exitosamente.");
+            JOptionPane.showMessageDialog(InfoEstudiantes, "El Estudiante se agrego exitosamente.");
         }
     }//GEN-LAST:event_Guardar2MouseClicked
 
@@ -974,7 +905,29 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_GeneroActionPerformed
 
     private void GuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMouseClicked
-        // TODO add your handling code here:
+        Profesores x = new Profesores();
+        x.setNombre(NProfesor.getText());
+        x.setIdentidad(Integer.parseInt(Nidentidad2.getText()));
+        x.setSexo(genero.getSelectedItem().toString());
+        x.setEdad(Integer.parseInt(EdadPr.getText()));
+        x.setEstado(Estado.getSelectedItem().toString());
+
+        if (NProfesor.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(InfoMaestros, "Llene todos los campos");
+        } else {
+
+            DefaultListModel model = (DefaultListModel) ListaProfes.getModel();
+
+            model.addElement(x);
+            ListaProfes.setModel(model);
+
+            NProfesor.setText("");
+            EdadPr.setText("");
+            genero.setSelectedIndex(0);
+            Nidentidad2.setText("");
+            Estado.setSelectedIndex(0);
+            JOptionPane.showMessageDialog(InfoMaestros, "El Profesor se agrego exitosamente.");
+        }
     }//GEN-LAST:event_GuardarMouseClicked
 
     private void InfoEtudiantes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoEtudiantes2MouseClicked
@@ -1012,6 +965,7 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JTextField Edad1;
     private javax.swing.JTextField Edad2;
     private javax.swing.JTextField EdadPr;
+    private javax.swing.JComboBox<String> Estado;
     private javax.swing.JComboBox<String> Genero;
     private javax.swing.JButton Guardar;
     private javax.swing.JButton Guardar2;
@@ -1027,6 +981,7 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JDialog InfoMaestros;
     private javax.swing.JPanel InfoProfesores;
     private javax.swing.JList<String> ListaEstudiantes;
+    private javax.swing.JList<String> ListaProfes;
     private javax.swing.JTextField NProfesor;
     private javax.swing.JTextField Nidentida;
     private javax.swing.JTextField Nidentida1;
@@ -1039,6 +994,7 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JPanel Principal;
     private javax.swing.JTextField Telefono;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> genero;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1063,17 +1019,12 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton12;
     private javax.swing.JRadioButton jRadioButton13;
     private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
