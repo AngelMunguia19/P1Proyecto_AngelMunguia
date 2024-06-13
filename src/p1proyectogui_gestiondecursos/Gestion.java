@@ -5,6 +5,8 @@
 package p1proyectogui_gestiondecursos;
 
 import java.security.Principal;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -61,7 +63,7 @@ public class Gestion extends javax.swing.JFrame {
         AggCursos = new javax.swing.JDialog();
         InfoEtudiantes3 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
-        NomEstudiante1 = new javax.swing.JTextField();
+        NomCurso = new javax.swing.JTextField();
         Guardar3 = new javax.swing.JButton();
         jToolBar1 = new javax.swing.JToolBar();
         jButton7 = new javax.swing.JButton();
@@ -89,7 +91,7 @@ public class Gestion extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList<>();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jList5 = new javax.swing.JList<>();
+        ListaEstudiantes = new javax.swing.JList<>();
         jLabel30 = new javax.swing.JLabel();
         Principal = new javax.swing.JPanel();
         AggEstudiante = new javax.swing.JButton();
@@ -97,6 +99,11 @@ public class Gestion extends javax.swing.JFrame {
         AggCurso = new javax.swing.JButton();
 
         InfoEtudiantes2.setBackground(new java.awt.Color(168, 191, 255));
+        InfoEtudiantes2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InfoEtudiantes2MouseClicked(evt);
+            }
+        });
 
         jLabel15.setBackground(new java.awt.Color(255, 255, 255));
         jLabel15.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -275,6 +282,11 @@ public class Gestion extends javax.swing.JFrame {
         Guardar.setForeground(new java.awt.Color(204, 204, 204));
         Guardar.setText("Guardar");
         Guardar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 255)));
+        Guardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarMouseClicked(evt);
+            }
+        });
         Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GuardarActionPerformed(evt);
@@ -375,17 +387,17 @@ public class Gestion extends javax.swing.JFrame {
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout InfoMaestrosLayout = new javax.swing.GroupLayout(InfoMaestros.getContentPane());
@@ -406,9 +418,9 @@ public class Gestion extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Nombre de el Curso");
 
-        NomEstudiante1.setBackground(new java.awt.Color(168, 168, 168));
-        NomEstudiante1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
-        NomEstudiante1.setForeground(new java.awt.Color(0, 0, 0));
+        NomCurso.setBackground(new java.awt.Color(168, 168, 168));
+        NomCurso.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
+        NomCurso.setForeground(new java.awt.Color(0, 0, 0));
 
         Guardar3.setBackground(new java.awt.Color(51, 51, 255));
         Guardar3.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
@@ -458,7 +470,7 @@ public class Gestion extends javax.swing.JFrame {
                         .addComponent(Guardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addComponent(NomEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(NomCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
                         .addGap(164, 164, 164)
                         .addComponent(jLabel19)))
@@ -472,7 +484,7 @@ public class Gestion extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(NomEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(NomCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Guardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(92, Short.MAX_VALUE))
@@ -692,13 +704,9 @@ public class Gestion extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jList3);
 
-        jList5.setBackground(new java.awt.Color(204, 204, 204));
-        jList5.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane5.setViewportView(jList5);
+        ListaEstudiantes.setBackground(new java.awt.Color(204, 204, 204));
+        ListaEstudiantes.setModel(new DefaultListModel());
+        jScrollPane5.setViewportView(ListaEstudiantes);
 
         jLabel30.setBackground(new java.awt.Color(255, 255, 255));
         jLabel30.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
@@ -876,6 +884,28 @@ public class Gestion extends javax.swing.JFrame {
         x.setNombre(NomEstudiante.getText());
         x.setIdentidad(Integer.parseInt(Nidentida.getText()));
         x.setSexo(Genero.getSelectedItem().toString());
+        x.setEdad(Integer.parseInt(Edad.getText()));
+
+        if (NomEstudiante.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(InfoEstudiantes, "Llene todos los campos");
+        } else {
+
+            //TOMAR EL MODELO DE LA LISTA
+            DefaultListModel model = (DefaultListModel) ListaEstudiantes.getModel();
+
+            //AGREGAR A LA LISTA
+            model.addElement(x);
+
+            //MANDAR LOS DATOS AL MODELO
+            ListaEstudiantes.setModel(model);
+
+            //LIMPIAR
+            NomEstudiante.setText("");
+            Edad.setText("");
+            Genero.setSelectedIndex(0);
+            Nidentida.setText("");
+            JOptionPane.showMessageDialog(InfoEstudiantes, "El jugador se agrego exitosamente.");
+        }
     }//GEN-LAST:event_Guardar2MouseClicked
 
     private void AggCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AggCursoActionPerformed
@@ -885,7 +915,8 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_AggCursoActionPerformed
 
     private void Guardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar3MouseClicked
-        // TODO add your handling code here:
+        Cursos n = new Cursos();
+//        n.setCursos(NomCurso.getText());
     }//GEN-LAST:event_Guardar3MouseClicked
 
     private void Guardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar3ActionPerformed
@@ -942,6 +973,14 @@ public class Gestion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GeneroActionPerformed
 
+    private void GuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuardarMouseClicked
+
+    private void InfoEtudiantes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoEtudiantes2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InfoEtudiantes2MouseClicked
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -987,13 +1026,14 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JPanel InfoEtudiantes7;
     private javax.swing.JDialog InfoMaestros;
     private javax.swing.JPanel InfoProfesores;
+    private javax.swing.JList<String> ListaEstudiantes;
     private javax.swing.JTextField NProfesor;
     private javax.swing.JTextField Nidentida;
     private javax.swing.JTextField Nidentida1;
     private javax.swing.JTextField Nidentida2;
     private javax.swing.JTextField Nidentidad2;
+    private javax.swing.JTextField NomCurso;
     private javax.swing.JTextField NomEstudiante;
-    private javax.swing.JTextField NomEstudiante1;
     private javax.swing.JTextField NomEstudiante2;
     private javax.swing.JTextField NomEstudiante3;
     private javax.swing.JPanel Principal;
@@ -1026,7 +1066,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
-    private javax.swing.JList<String> jList5;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton12;
