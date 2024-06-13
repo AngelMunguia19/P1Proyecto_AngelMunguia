@@ -76,7 +76,7 @@ public class Gestion extends javax.swing.JFrame {
         Cursos = new javax.swing.JDialog();
         InfoEtudiantes7 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jList4 = new javax.swing.JList<>();
+        ListaCursos = new javax.swing.JList<>();
         jLabel29 = new javax.swing.JLabel();
         jToolBar2 = new javax.swing.JToolBar();
         Bo_AggMaestros = new javax.swing.JButton();
@@ -277,7 +277,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Telefono o Correo electronico");
+        jLabel10.setText("Telefono");
 
         Telefono.setBackground(new java.awt.Color(168, 168, 168));
         Telefono.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
@@ -489,6 +489,7 @@ public class Gestion extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         ListaProfes.setBackground(new java.awt.Color(204, 204, 204));
+        ListaProfes.setModel(new DefaultListModel());
         jScrollPane2.setViewportView(ListaProfes);
 
         jLabel28.setBackground(new java.awt.Color(255, 255, 255));
@@ -544,13 +545,9 @@ public class Gestion extends javax.swing.JFrame {
 
         InfoEtudiantes7.setBackground(new java.awt.Color(168, 191, 255));
 
-        jList4.setBackground(new java.awt.Color(204, 204, 204));
-        jList4.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane4.setViewportView(jList4);
+        ListaCursos.setBackground(new java.awt.Color(204, 204, 204));
+        ListaCursos.setModel(new DefaultListModel());
+        jScrollPane4.setViewportView(ListaCursos);
 
         jLabel29.setBackground(new java.awt.Color(255, 255, 255));
         jLabel29.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
@@ -847,7 +844,19 @@ public class Gestion extends javax.swing.JFrame {
 
     private void Guardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar3MouseClicked
         Cursos n = new Cursos();
-//        n.setCursos(NomCurso.getText());
+        n.setCursos(NomCurso.getText());
+        if (NomCurso.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(Cursos, "Llene todos los campos");
+        } else {
+
+            DefaultListModel model = (DefaultListModel) ListaCursos.getModel();
+
+            model.addElement(n);
+            ListaCursos.setModel(model);
+
+            NomCurso.setText("");
+            JOptionPane.showMessageDialog(InfoEstudiantes, "El curso se agrego exitosamente.");
+        }
     }//GEN-LAST:event_Guardar3MouseClicked
 
     private void Guardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar3ActionPerformed
@@ -911,6 +920,7 @@ public class Gestion extends javax.swing.JFrame {
         x.setSexo(genero.getSelectedItem().toString());
         x.setEdad(Integer.parseInt(EdadPr.getText()));
         x.setEstado(Estado.getSelectedItem().toString());
+        x.setTelefono(Integer.parseInt(Telefono.getText()));
 
         if (NProfesor.getText().isEmpty()) {
             JOptionPane.showMessageDialog(InfoMaestros, "Llene todos los campos");
@@ -921,6 +931,7 @@ public class Gestion extends javax.swing.JFrame {
             model.addElement(x);
             ListaProfes.setModel(model);
 
+            Telefono.setText("");
             NProfesor.setText("");
             EdadPr.setText("");
             genero.setSelectedIndex(0);
@@ -980,6 +991,7 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JPanel InfoEtudiantes7;
     private javax.swing.JDialog InfoMaestros;
     private javax.swing.JPanel InfoProfesores;
+    private javax.swing.JList<String> ListaCursos;
     private javax.swing.JList<String> ListaEstudiantes;
     private javax.swing.JList<String> ListaProfes;
     private javax.swing.JTextField NProfesor;
@@ -1020,7 +1032,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList3;
-    private javax.swing.JList<String> jList4;
     private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton12;
     private javax.swing.JRadioButton jRadioButton13;

@@ -14,16 +14,26 @@ public class Profesores {
     private int edad;
     private String sexo;
     private String estado;
+    private int telefono;
 
     public Profesores() {
     }
 
-    public Profesores(String nombre, int identidad, int edad, String sexo, String estado) {
+    public Profesores(String nombre, int identidad, int edad, String sexo, String estado, int telefono) {
         this.nombre = nombre;
         this.identidad = identidad;
         this.edad = edad;
         this.sexo = sexo;
         this.estado = estado;
+        this.telefono = telefono;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
     
     public String getNombre() {
@@ -65,7 +75,9 @@ public class Profesores {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return nombre;
+    }   
 }

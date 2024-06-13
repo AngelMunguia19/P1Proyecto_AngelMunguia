@@ -11,22 +11,25 @@ import java.util.ArrayList;
  * @author Usuario
  */
 public class Cursos {
-    private ArrayList<String> cursos = new ArrayList<>();
+    private String cursos;
 
     public Cursos() {
     }
 
-    public Cursos(ArrayList<String> cursos) {
+    public Cursos(String cursos) {
         this.cursos = cursos;
     }
     
-    public ArrayList<String> getCursos() {
+    public String getCursos() {
         return cursos;
     }
 
-    public void setCursos(ArrayList<String> cursos) {
+    public void setCursos(String cursos) {
         this.cursos = cursos;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return cursos;
+    }   
 }
