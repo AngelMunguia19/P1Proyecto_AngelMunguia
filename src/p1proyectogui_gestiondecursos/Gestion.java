@@ -448,13 +448,18 @@ public class Gestion extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
         jButton7.setText("Lista de cursos");
-        jButton7.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton7.setFocusable(false);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
+            }
+        });
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
             }
         });
         jToolBar1.add(jButton7);
@@ -481,8 +486,8 @@ public class Gestion extends javax.swing.JFrame {
             InfoEtudiantes3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(NomEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -894,7 +899,7 @@ public class Gestion extends javax.swing.JFrame {
 
     private void Guardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar2MouseClicked
 
-        String estudiante = NomEstudiante.getText();
+        String nombre = NomEstudiante.getText();
         String identidad = Nidentida.getText();
         String edad = Edad.getText();
 
@@ -955,6 +960,10 @@ public class Gestion extends javax.swing.JFrame {
         AggEstudiantes.setVisible(true);
         AggEstudiantes.setLocationRelativeTo(null);
     }//GEN-LAST:event_Bo_AggAlumnosMouseClicked
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     public static void main(String args[]) {
 

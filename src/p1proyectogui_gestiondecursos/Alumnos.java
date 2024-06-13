@@ -10,14 +10,15 @@ import java.util.ArrayList;
  *
  * @author Usuario
  */
-public class Cursos {
+public class Alumnos {
     private int NumCuenta;
     private String nombre;
     private String profesor;
     private int calificaciones;
+    private String identidad;
     private ArrayList<String> estudiantes;
 
-    public Cursos(String nombre, String profesor, int NumCuenta) {
+    public Alumnos(String nombre, String profesor, int NumCuenta) {
         this.nombre = nombre;
         this.calificaciones = calificaciones;
         this.NumCuenta = NumCuenta;
