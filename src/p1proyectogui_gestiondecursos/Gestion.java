@@ -59,9 +59,43 @@ public class Gestion extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         Telefono = new javax.swing.JTextField();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        AggCursos = new javax.swing.JDialog();
+        InfoEtudiantes3 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        NomEstudiante1 = new javax.swing.JTextField();
+        Guardar3 = new javax.swing.JButton();
+        jToolBar1 = new javax.swing.JToolBar();
+        jButton7 = new javax.swing.JButton();
+        AggMaestros = new javax.swing.JDialog();
+        AsignarMaestros = new javax.swing.JPanel();
+        Asignar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jLabel28 = new javax.swing.JLabel();
+        Cursos = new javax.swing.JDialog();
+        InfoEtudiantes7 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList<>();
+        jLabel29 = new javax.swing.JLabel();
+        jToolBar2 = new javax.swing.JToolBar();
+        Bo_AggMaestros = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JToolBar.Separator();
+        jSeparator2 = new javax.swing.JToolBar.Separator();
+        Bo_AggAlumnos = new javax.swing.JButton();
+        AggEstudiantes = new javax.swing.JDialog();
+        AsignarMaestros1 = new javax.swing.JPanel();
+        Asignar1 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jList5 = new javax.swing.JList<>();
+        jLabel30 = new javax.swing.JLabel();
         Principal = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        AggEstudiante = new javax.swing.JButton();
+        AggProfesor = new javax.swing.JButton();
+        AggCurso = new javax.swing.JButton();
 
         InfoEtudiantes2.setBackground(new java.awt.Color(168, 191, 255));
 
@@ -383,29 +417,392 @@ public class Gestion extends javax.swing.JFrame {
             .addComponent(InfoProfesores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        InfoEtudiantes3.setBackground(new java.awt.Color(168, 191, 255));
+
+        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel19.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Nombre de el Curso");
+
+        NomEstudiante1.setBackground(new java.awt.Color(168, 168, 168));
+        NomEstudiante1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
+        NomEstudiante1.setForeground(new java.awt.Color(0, 0, 0));
+
+        Guardar3.setBackground(new java.awt.Color(51, 51, 255));
+        Guardar3.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        Guardar3.setForeground(new java.awt.Color(204, 204, 204));
+        Guardar3.setText("Guardar");
+        Guardar3.setBorder(new javax.swing.border.MatteBorder(null));
+        Guardar3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Guardar3MouseClicked(evt);
+            }
+        });
+        Guardar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Guardar3ActionPerformed(evt);
+            }
+        });
+
+        jToolBar1.setRollover(true);
+
+        jButton7.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        jButton7.setText("Lista de cursos");
+        jButton7.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton7.setFocusable(false);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+        jToolBar1.add(jButton7);
+
+        javax.swing.GroupLayout InfoEtudiantes3Layout = new javax.swing.GroupLayout(InfoEtudiantes3);
+        InfoEtudiantes3.setLayout(InfoEtudiantes3Layout);
+        InfoEtudiantes3Layout.setHorizontalGroup(
+            InfoEtudiantes3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
+                .addGroup(InfoEtudiantes3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(Guardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(NomEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(jLabel19)))
+                .addContainerGap(154, Short.MAX_VALUE))
+        );
+        InfoEtudiantes3Layout.setVerticalGroup(
+            InfoEtudiantes3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(NomEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Guardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout AggCursosLayout = new javax.swing.GroupLayout(AggCursos.getContentPane());
+        AggCursos.getContentPane().setLayout(AggCursosLayout);
+        AggCursosLayout.setHorizontalGroup(
+            AggCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AggCursosLayout.createSequentialGroup()
+                .addComponent(InfoEtudiantes3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        AggCursosLayout.setVerticalGroup(
+            AggCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AggCursosLayout.createSequentialGroup()
+                .addComponent(InfoEtudiantes3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        AsignarMaestros.setBackground(new java.awt.Color(168, 191, 255));
+
+        Asignar.setBackground(new java.awt.Color(51, 51, 255));
+        Asignar.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        Asignar.setForeground(new java.awt.Color(204, 204, 204));
+        Asignar.setText("Asignar");
+        Asignar.setBorder(new javax.swing.border.MatteBorder(null));
+        Asignar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AsignarMouseClicked(evt);
+            }
+        });
+        Asignar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AsignarActionPerformed(evt);
+            }
+        });
+
+        jList1.setBackground(new java.awt.Color(204, 204, 204));
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jList2.setBackground(new java.awt.Color(204, 204, 204));
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
+
+        jLabel28.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel28.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel28.setText("Asignar maestros");
+
+        javax.swing.GroupLayout AsignarMaestrosLayout = new javax.swing.GroupLayout(AsignarMaestros);
+        AsignarMaestros.setLayout(AsignarMaestrosLayout);
+        AsignarMaestrosLayout.setHorizontalGroup(
+            AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestrosLayout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Asignar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                .addGap(58, 58, 58))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestrosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel28)
+                .addGap(178, 178, 178))
+        );
+        AsignarMaestrosLayout.setVerticalGroup(
+            AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AsignarMaestrosLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AsignarMaestrosLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                        .addGroup(AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(100, 100, 100))
+                    .addGroup(AsignarMaestrosLayout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(Asignar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+
+        javax.swing.GroupLayout AggMaestrosLayout = new javax.swing.GroupLayout(AggMaestros.getContentPane());
+        AggMaestros.getContentPane().setLayout(AggMaestrosLayout);
+        AggMaestrosLayout.setHorizontalGroup(
+            AggMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(AsignarMaestros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        AggMaestrosLayout.setVerticalGroup(
+            AggMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(AsignarMaestros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        InfoEtudiantes7.setBackground(new java.awt.Color(168, 191, 255));
+
+        jList4.setBackground(new java.awt.Color(204, 204, 204));
+        jList4.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList4);
+
+        jLabel29.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel29.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel29.setText("Lista de cursos");
+
+        jToolBar2.setRollover(true);
+
+        Bo_AggMaestros.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        Bo_AggMaestros.setText("Asignar Maestros");
+        Bo_AggMaestros.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        Bo_AggMaestros.setFocusable(false);
+        Bo_AggMaestros.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Bo_AggMaestros.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Bo_AggMaestros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Bo_AggMaestrosMouseClicked(evt);
+            }
+        });
+        jToolBar2.add(Bo_AggMaestros);
+        jToolBar2.add(jSeparator1);
+        jToolBar2.add(jSeparator2);
+
+        Bo_AggAlumnos.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        Bo_AggAlumnos.setText("Asignar Alumnos");
+        Bo_AggAlumnos.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        Bo_AggAlumnos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Bo_AggAlumnos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Bo_AggAlumnos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Bo_AggAlumnosMouseClicked(evt);
+            }
+        });
+        Bo_AggAlumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bo_AggAlumnosActionPerformed(evt);
+            }
+        });
+        jToolBar2.add(Bo_AggAlumnos);
+
+        javax.swing.GroupLayout InfoEtudiantes7Layout = new javax.swing.GroupLayout(InfoEtudiantes7);
+        InfoEtudiantes7.setLayout(InfoEtudiantes7Layout);
+        InfoEtudiantes7Layout.setHorizontalGroup(
+            InfoEtudiantes7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InfoEtudiantes7Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addGroup(InfoEtudiantes7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel29)
+                    .addGroup(InfoEtudiantes7Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(88, Short.MAX_VALUE))
+            .addComponent(jToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        InfoEtudiantes7Layout.setVerticalGroup(
+            InfoEtudiantes7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InfoEtudiantes7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(78, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout CursosLayout = new javax.swing.GroupLayout(Cursos.getContentPane());
+        Cursos.getContentPane().setLayout(CursosLayout);
+        CursosLayout.setHorizontalGroup(
+            CursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(InfoEtudiantes7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        CursosLayout.setVerticalGroup(
+            CursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CursosLayout.createSequentialGroup()
+                .addComponent(InfoEtudiantes7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        AsignarMaestros1.setBackground(new java.awt.Color(168, 191, 255));
+
+        Asignar1.setBackground(new java.awt.Color(51, 51, 255));
+        Asignar1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        Asignar1.setForeground(new java.awt.Color(204, 204, 204));
+        Asignar1.setText("Asignar");
+        Asignar1.setBorder(new javax.swing.border.MatteBorder(null));
+        Asignar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Asignar1MouseClicked(evt);
+            }
+        });
+        Asignar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Asignar1ActionPerformed(evt);
+            }
+        });
+
+        jList3.setBackground(new java.awt.Color(204, 204, 204));
+        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList3);
+
+        jList5.setBackground(new java.awt.Color(204, 204, 204));
+        jList5.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane5.setViewportView(jList5);
+
+        jLabel30.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel30.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel30.setText("Asignar Estudiantes");
+
+        javax.swing.GroupLayout AsignarMaestros1Layout = new javax.swing.GroupLayout(AsignarMaestros1);
+        AsignarMaestros1.setLayout(AsignarMaestros1Layout);
+        AsignarMaestros1Layout.setHorizontalGroup(
+            AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestros1Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Asignar1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                .addGap(58, 58, 58))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestros1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel30)
+                .addGap(178, 178, 178))
+        );
+        AsignarMaestros1Layout.setVerticalGroup(
+            AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AsignarMaestros1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AsignarMaestros1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addGroup(AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(100, 100, 100))
+                    .addGroup(AsignarMaestros1Layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(Asignar1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+
+        javax.swing.GroupLayout AggEstudiantesLayout = new javax.swing.GroupLayout(AggEstudiantes.getContentPane());
+        AggEstudiantes.getContentPane().setLayout(AggEstudiantesLayout);
+        AggEstudiantesLayout.setHorizontalGroup(
+            AggEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(AsignarMaestros1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        AggEstudiantesLayout.setVerticalGroup(
+            AggEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(AsignarMaestros1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Principal.setBackground(new java.awt.Color(153, 153, 255));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 255));
-        jButton1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("Agregar estudiante");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 102)));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        AggEstudiante.setBackground(new java.awt.Color(51, 51, 255));
+        AggEstudiante.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        AggEstudiante.setForeground(new java.awt.Color(204, 204, 204));
+        AggEstudiante.setText("Agregar estudiante");
+        AggEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 102)));
+        AggEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AggEstudianteActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 255));
-        jButton2.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Agregar Profesor");
-        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 51)));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        AggProfesor.setBackground(new java.awt.Color(51, 51, 255));
+        AggProfesor.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        AggProfesor.setForeground(new java.awt.Color(204, 204, 204));
+        AggProfesor.setText("Agregar Profesor");
+        AggProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 51)));
+        AggProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AggProfesorMouseClicked(evt);
+            }
+        });
+        AggProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                AggProfesorActionPerformed(evt);
+            }
+        });
+
+        AggCurso.setBackground(new java.awt.Color(51, 51, 255));
+        AggCurso.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        AggCurso.setForeground(new java.awt.Color(204, 204, 204));
+        AggCurso.setText("Agregar Cursos");
+        AggCurso.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 0, new java.awt.Color(0, 102, 102)));
+        AggCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AggCursoActionPerformed(evt);
             }
         });
 
@@ -416,18 +813,21 @@ public class Gestion extends javax.swing.JFrame {
             .addGroup(PrincipalLayout.createSequentialGroup()
                 .addGap(275, 275, 275)
                 .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(AggProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addComponent(AggEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AggCurso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(296, Short.MAX_VALUE))
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrincipalLayout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AggEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addComponent(AggProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(AggCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -444,17 +844,17 @@ public class Gestion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void AggEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AggEstudianteActionPerformed
         InfoEstudiantes.pack();
         InfoEstudiantes.setVisible(true);
         InfoEstudiantes.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_AggEstudianteActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void AggProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AggProfesorActionPerformed
         InfoMaestros.pack();
         InfoMaestros.setVisible(true);
         InfoMaestros.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_AggProfesorActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
@@ -493,14 +893,68 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_Guardar2ActionPerformed
 
     private void Guardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar2MouseClicked
-        DefaultTreeModel treemodel =(DefaltTreeModel) this.tree.getModel();
-        
-        
+
         String estudiante = NomEstudiante.getText();
         String identidad = Nidentida.getText();
         String edad = Edad.getText();
 
     }//GEN-LAST:event_Guardar2MouseClicked
+
+    private void AggCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AggCursoActionPerformed
+        AggCursos.pack();
+        AggCursos.setVisible(true);
+        AggCursos.setLocationRelativeTo(null);
+    }//GEN-LAST:event_AggCursoActionPerformed
+
+    private void Guardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Guardar3MouseClicked
+
+    private void Guardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Guardar3ActionPerformed
+
+    private void AsignarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AsignarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AsignarMouseClicked
+
+    private void AsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsignarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AsignarActionPerformed
+
+    private void AggProfesorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AggProfesorMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AggProfesorMouseClicked
+
+    private void Asignar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Asignar1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Asignar1MouseClicked
+
+    private void Asignar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asignar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Asignar1ActionPerformed
+
+    private void Bo_AggAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bo_AggAlumnosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bo_AggAlumnosActionPerformed
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        Cursos.pack();
+        Cursos.setVisible(true);
+        Cursos.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void Bo_AggMaestrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bo_AggMaestrosMouseClicked
+        AggMaestros.pack();
+        AggMaestros.setVisible(true);
+        AggMaestros.setLocationRelativeTo(null);
+    }//GEN-LAST:event_Bo_AggMaestrosMouseClicked
+
+    private void Bo_AggAlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bo_AggAlumnosMouseClicked
+        AggEstudiantes.pack();
+        AggEstudiantes.setVisible(true);
+        AggEstudiantes.setLocationRelativeTo(null);
+    }//GEN-LAST:event_Bo_AggAlumnosMouseClicked
 
     public static void main(String args[]) {
 
@@ -516,38 +970,94 @@ public class Gestion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AggCurso;
+    private javax.swing.JDialog AggCursos;
+    private javax.swing.JButton AggEstudiante;
+    private javax.swing.JDialog AggEstudiantes;
+    private javax.swing.JDialog AggMaestros;
+    private javax.swing.JButton AggProfesor;
+    private javax.swing.JButton Asignar;
+    private javax.swing.JButton Asignar1;
+    private javax.swing.JPanel AsignarMaestros;
+    private javax.swing.JPanel AsignarMaestros1;
+    private javax.swing.JButton Bo_AggAlumnos;
+    private javax.swing.JButton Bo_AggMaestros;
+    private javax.swing.JDialog Cursos;
     private javax.swing.JTextField Edad;
+    private javax.swing.JTextField Edad1;
+    private javax.swing.JTextField Edad2;
     private javax.swing.JTextField EdadPr;
     private javax.swing.JButton Guardar;
     private javax.swing.JButton Guardar2;
+    private javax.swing.JButton Guardar3;
+    private javax.swing.JButton Guardar4;
+    private javax.swing.JButton Guardar5;
     private javax.swing.JDialog InfoEstudiantes;
     private javax.swing.JPanel InfoEtudiantes2;
+    private javax.swing.JPanel InfoEtudiantes3;
+    private javax.swing.JPanel InfoEtudiantes4;
+    private javax.swing.JPanel InfoEtudiantes5;
+    private javax.swing.JPanel InfoEtudiantes7;
     private javax.swing.JDialog InfoMaestros;
     private javax.swing.JPanel InfoProfesores;
     private javax.swing.JTextField NProfesor;
     private javax.swing.JTextField Nidentida;
+    private javax.swing.JTextField Nidentida1;
+    private javax.swing.JTextField Nidentida2;
     private javax.swing.JTextField Nidentidad2;
     private javax.swing.JTextField NomEstudiante;
+    private javax.swing.JTextField NomEstudiante1;
+    private javax.swing.JTextField NomEstudiante2;
+    private javax.swing.JTextField NomEstudiante3;
     private javax.swing.JPanel Principal;
     private javax.swing.JTextField Telefono;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList3;
+    private javax.swing.JList<String> jList4;
+    private javax.swing.JList<String> jList5;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JToolBar.Separator jSeparator1;
+    private javax.swing.JToolBar.Separator jSeparator2;
+    private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JToolBar jToolBar2;
     // End of variables declaration//GEN-END:variables
 }
