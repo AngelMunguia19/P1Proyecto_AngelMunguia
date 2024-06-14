@@ -212,7 +212,9 @@ public class Gestion extends javax.swing.JFrame {
         InfoEstudiantes.getContentPane().setLayout(InfoEstudiantesLayout);
         InfoEstudiantesLayout.setHorizontalGroup(
             InfoEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(InfoEstudiantesLayout.createSequentialGroup()
+                .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         InfoEstudiantesLayout.setVerticalGroup(
             InfoEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -818,21 +820,25 @@ public class Gestion extends javax.swing.JFrame {
         x.setIdentidad(Integer.parseInt(Nidentida.getText()));
         x.setSexo(Genero.getSelectedItem().toString());
         x.setEdad(Integer.parseInt(Edad.getText()));
+        
+        if (Integer.parseInt(Edad.getText()) < 1){
+            JOptionPane.showMessageDialog(InfoEstudiantes, "La edad tiene que ser mayor a 0");
+        }else{
+            if (NomEstudiante.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(InfoEstudiantes, "Llene todos los campos");
+            } else {
 
-        if (NomEstudiante.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(InfoEstudiantes, "Llene todos los campos");
-        } else {
+                DefaultListModel model = (DefaultListModel) ListaEstudiantes.getModel();
 
-            DefaultListModel model = (DefaultListModel) ListaEstudiantes.getModel();
+                model.addElement(x);
+                ListaEstudiantes.setModel(model);
 
-            model.addElement(x);
-            ListaEstudiantes.setModel(model);
-
-            NomEstudiante.setText("");
-            Edad.setText("");
-            Genero.setSelectedIndex(0);
-            Nidentida.setText("");
-            JOptionPane.showMessageDialog(InfoEstudiantes, "El Estudiante se agrego exitosamente.");
+                NomEstudiante.setText("");
+                Edad.setText("");
+                Genero.setSelectedIndex(0);
+                Nidentida.setText("");
+                JOptionPane.showMessageDialog(InfoEstudiantes, "El Estudiante se agrego exitosamente.");
+            }
         }
     }//GEN-LAST:event_Guardar2MouseClicked
 
@@ -973,21 +979,15 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JButton Bo_AggMaestros;
     private javax.swing.JDialog Cursos;
     private javax.swing.JTextField Edad;
-    private javax.swing.JTextField Edad1;
-    private javax.swing.JTextField Edad2;
     private javax.swing.JTextField EdadPr;
     private javax.swing.JComboBox<String> Estado;
     private javax.swing.JComboBox<String> Genero;
     private javax.swing.JButton Guardar;
     private javax.swing.JButton Guardar2;
     private javax.swing.JButton Guardar3;
-    private javax.swing.JButton Guardar4;
-    private javax.swing.JButton Guardar5;
     private javax.swing.JDialog InfoEstudiantes;
     private javax.swing.JPanel InfoEtudiantes2;
     private javax.swing.JPanel InfoEtudiantes3;
-    private javax.swing.JPanel InfoEtudiantes4;
-    private javax.swing.JPanel InfoEtudiantes5;
     private javax.swing.JPanel InfoEtudiantes7;
     private javax.swing.JDialog InfoMaestros;
     private javax.swing.JPanel InfoProfesores;
@@ -996,13 +996,9 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JList<String> ListaProfes;
     private javax.swing.JTextField NProfesor;
     private javax.swing.JTextField Nidentida;
-    private javax.swing.JTextField Nidentida1;
-    private javax.swing.JTextField Nidentida2;
     private javax.swing.JTextField Nidentidad2;
     private javax.swing.JTextField NomCurso;
     private javax.swing.JTextField NomEstudiante;
-    private javax.swing.JTextField NomEstudiante2;
-    private javax.swing.JTextField NomEstudiante3;
     private javax.swing.JPanel Principal;
     private javax.swing.JTextField Telefono;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -1016,14 +1012,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
@@ -1032,10 +1020,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList3;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
