@@ -80,8 +80,8 @@ public class Gestion extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JToolBar.Separator();
         jSeparator2 = new javax.swing.JToolBar.Separator();
         Bo_AggAlumnos = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        ArbolCursos = new javax.swing.JTree();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ListasCursos = new javax.swing.JList<>();
         AggEstudiantes = new javax.swing.JDialog();
         AsignarMaestros1 = new javax.swing.JPanel();
         Asignar1 = new javax.swing.JButton();
@@ -95,6 +95,8 @@ public class Gestion extends javax.swing.JFrame {
         AggProfesor = new javax.swing.JButton();
         AggCurso = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         InfoEtudiantes2.setBackground(new java.awt.Color(255, 255, 255));
         InfoEtudiantes2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -181,18 +183,18 @@ public class Gestion extends javax.swing.JFrame {
                         .addGroup(InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel15)
                             .addComponent(jLabel17)
-                            .addComponent(NomEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                            .addComponent(NomEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
                             .addComponent(Nidentida))
-                        .addGap(58, 58, 58)
+                        .addGap(77, 77, 77)
                         .addGroup(InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
-                            .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Genero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18)))
+                            .addComponent(jLabel18)
+                            .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(InfoEtudiantes2Layout.createSequentialGroup()
-                        .addGap(214, 214, 214)
+                        .addGap(199, 199, 199)
                         .addComponent(Guardar2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         InfoEtudiantes2Layout.setVerticalGroup(
             InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,22 +215,20 @@ public class Gestion extends javax.swing.JFrame {
                 .addGroup(InfoEtudiantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nidentida, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Genero, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addComponent(Guardar2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addGap(64, 64, 64))
         );
 
         javax.swing.GroupLayout InfoEstudiantesLayout = new javax.swing.GroupLayout(InfoEstudiantes.getContentPane());
         InfoEstudiantes.getContentPane().setLayout(InfoEstudiantesLayout);
         InfoEstudiantesLayout.setHorizontalGroup(
             InfoEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         InfoEstudiantesLayout.setVerticalGroup(
             InfoEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InfoEstudiantesLayout.createSequentialGroup()
-                .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(InfoEtudiantes2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         InfoProfesores.setBackground(new java.awt.Color(255, 255, 255));
@@ -320,35 +320,35 @@ public class Gestion extends javax.swing.JFrame {
             .addGroup(InfoProfesoresLayout.createSequentialGroup()
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                        .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1)
-                                    .addComponent(Nidentidad2, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
-                                    .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                                        .addGap(46, 46, 46)
-                                        .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(NProfesor)))
-                            .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(jLabel5))
-                            .addComponent(jLabel4))
-                        .addGap(49, 49, 49)
+                        .addContainerGap()
                         .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2)
-                            .addComponent(Telefono, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
-                            .addComponent(jLabel10)
+                            .addComponent(jLabel1)
                             .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Estado, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9)))
-                            .addComponent(EdadPr)))
+                                .addGap(46, 46, 46)
+                                .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Nidentidad2, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                            .addComponent(NProfesor)))
                     .addGroup(InfoProfesoresLayout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel5))
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel10)
+                    .addGroup(InfoProfesoresLayout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Estado, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)))
+                    .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(Telefono, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                        .addComponent(EdadPr)))
+                .addContainerGap())
+            .addGroup(InfoProfesoresLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(211, Short.MAX_VALUE))
         );
         InfoProfesoresLayout.setVerticalGroup(
             InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,20 +377,20 @@ public class Gestion extends javax.swing.JFrame {
                 .addGroup(InfoProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Estado, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
+                .addGap(53, 53, 53))
         );
 
         javax.swing.GroupLayout InfoMaestrosLayout = new javax.swing.GroupLayout(InfoMaestros.getContentPane());
         InfoMaestros.getContentPane().setLayout(InfoMaestrosLayout);
         InfoMaestrosLayout.setHorizontalGroup(
             InfoMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(InfoProfesores, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(InfoProfesores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         InfoMaestrosLayout.setVerticalGroup(
             InfoMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(InfoProfesores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(InfoProfesores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         InfoEtudiantes3.setBackground(new java.awt.Color(255, 255, 255));
@@ -490,11 +490,11 @@ public class Gestion extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        AsignarMaestros.setBackground(new java.awt.Color(168, 191, 255));
+        AsignarMaestros.setBackground(new java.awt.Color(255, 255, 255));
 
-        Asignar.setBackground(new java.awt.Color(51, 51, 255));
+        Asignar.setBackground(new java.awt.Color(0, 0, 153));
         Asignar.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
-        Asignar.setForeground(new java.awt.Color(204, 204, 204));
+        Asignar.setForeground(new java.awt.Color(255, 255, 255));
         Asignar.setText("Asignar");
         Asignar.setBorder(new javax.swing.border.MatteBorder(null));
         Asignar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -532,53 +532,57 @@ public class Gestion extends javax.swing.JFrame {
                 .addComponent(jLabel28)
                 .addGap(178, 178, 178))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestrosLayout.createSequentialGroup()
-                .addGap(97, 97, 97)
+                .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Asignar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         AsignarMaestrosLayout.setVerticalGroup(
             AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AsignarMaestrosLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(AsignarMaestrosLayout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(Asignar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestrosLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addGroup(AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addGap(100, 100, 100))))
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(AsignarMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(AsignarMaestrosLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AsignarMaestrosLayout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(Asignar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout AggMaestrosLayout = new javax.swing.GroupLayout(AggMaestros.getContentPane());
         AggMaestros.getContentPane().setLayout(AggMaestrosLayout);
         AggMaestrosLayout.setHorizontalGroup(
             AggMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AsignarMaestros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(AsignarMaestros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         AggMaestrosLayout.setVerticalGroup(
             AggMaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AsignarMaestros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(AsignarMaestros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        CursosL.setBackground(new java.awt.Color(168, 191, 255));
+        CursosL.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel29.setBackground(new java.awt.Color(255, 255, 255));
         jLabel29.setFont(new java.awt.Font("Eras Demi ITC", 1, 36)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(0, 0, 0));
         jLabel29.setText("Lista de cursos");
 
+        jToolBar2.setBackground(new java.awt.Color(0, 0, 204));
+        jToolBar2.setForeground(new java.awt.Color(204, 0, 0));
         jToolBar2.setRollover(true);
 
-        Bo_AggMaestros.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        Bo_AggMaestros.setBackground(new java.awt.Color(0, 0, 204));
+        Bo_AggMaestros.setFont(new java.awt.Font("Eras Demi ITC", 1, 14)); // NOI18N
+        Bo_AggMaestros.setForeground(new java.awt.Color(255, 255, 255));
         Bo_AggMaestros.setText("Asignar Maestros");
         Bo_AggMaestros.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         Bo_AggMaestros.setFocusable(false);
@@ -593,7 +597,9 @@ public class Gestion extends javax.swing.JFrame {
         jToolBar2.add(jSeparator1);
         jToolBar2.add(jSeparator2);
 
-        Bo_AggAlumnos.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        Bo_AggAlumnos.setBackground(new java.awt.Color(0, 0, 204));
+        Bo_AggAlumnos.setFont(new java.awt.Font("Eras Demi ITC", 1, 14)); // NOI18N
+        Bo_AggAlumnos.setForeground(new java.awt.Color(255, 255, 255));
         Bo_AggAlumnos.setText("Asignar Alumnos");
         Bo_AggAlumnos.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         Bo_AggAlumnos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -610,11 +616,10 @@ public class Gestion extends javax.swing.JFrame {
         });
         jToolBar2.add(Bo_AggAlumnos);
 
-        ArbolCursos.setBackground(new java.awt.Color(204, 204, 204));
-        ArbolCursos.setForeground(new java.awt.Color(0, 0, 0));
-        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Liata de cursos");
-        ArbolCursos.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane6.setViewportView(ArbolCursos);
+        ListasCursos.setBackground(new java.awt.Color(204, 204, 204));
+        ListasCursos.setForeground(new java.awt.Color(0, 0, 0));
+        ListasCursos.setModel(new DefaultListModel());
+        jScrollPane1.setViewportView(ListasCursos);
 
         javax.swing.GroupLayout CursosLLayout = new javax.swing.GroupLayout(CursosL);
         CursosL.setLayout(CursosLLayout);
@@ -622,12 +627,13 @@ public class Gestion extends javax.swing.JFrame {
             CursosLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(CursosLLayout.createSequentialGroup()
-                .addGap(79, 79, 79)
                 .addGroup(CursosLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CursosLLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel29))
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel29))
+                    .addGroup(CursosLLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
         CursosLLayout.setVerticalGroup(
@@ -637,9 +643,9 @@ public class Gestion extends javax.swing.JFrame {
                 .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout CursosLayout = new javax.swing.GroupLayout(Cursos.getContentPane());
@@ -655,11 +661,11 @@ public class Gestion extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        AsignarMaestros1.setBackground(new java.awt.Color(168, 191, 255));
+        AsignarMaestros1.setBackground(new java.awt.Color(255, 255, 255));
 
-        Asignar1.setBackground(new java.awt.Color(51, 51, 255));
+        Asignar1.setBackground(new java.awt.Color(0, 0, 153));
         Asignar1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
-        Asignar1.setForeground(new java.awt.Color(204, 204, 204));
+        Asignar1.setForeground(new java.awt.Color(255, 255, 255));
         Asignar1.setText("Asignar");
         Asignar1.setBorder(new javax.swing.border.MatteBorder(null));
         Asignar1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -675,6 +681,11 @@ public class Gestion extends javax.swing.JFrame {
 
         ListaEstudiantes.setBackground(new java.awt.Color(204, 204, 204));
         ListaEstudiantes.setModel(new DefaultListModel());
+        ListaEstudiantes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ListaEstudiantesMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(ListaEstudiantes);
 
         jLabel30.setBackground(new java.awt.Color(255, 255, 255));
@@ -684,7 +695,7 @@ public class Gestion extends javax.swing.JFrame {
 
         ArbolEs.setBackground(new java.awt.Color(204, 204, 204));
         ArbolEs.setForeground(new java.awt.Color(0, 0, 0));
-        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Curos");
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Cursos");
         ArbolEs.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane4.setViewportView(ArbolEs);
 
@@ -693,43 +704,40 @@ public class Gestion extends javax.swing.JFrame {
         AsignarMaestros1Layout.setHorizontalGroup(
             AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AsignarMaestros1Layout.createSequentialGroup()
-                .addGroup(AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AsignarMaestros1Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Asignar1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE))
-                    .addGroup(AsignarMaestros1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel30)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Asignar1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                .addContainerGap(12, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestros1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel30)
+                .addGap(127, 127, 127))
         );
         AsignarMaestros1Layout.setVerticalGroup(
             AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AsignarMaestros1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addContainerGap()
                 .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AsignarMaestros1Layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(Asignar1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AsignarMaestros1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                        .addGroup(AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
-                        .addGap(100, 100, 100))))
+                        .addGap(96, 96, 96)
+                        .addComponent(Asignar1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AsignarMaestros1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(AsignarMaestros1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout AggEstudiantesLayout = new javax.swing.GroupLayout(AggEstudiantes.getContentPane());
         AggEstudiantes.getContentPane().setLayout(AggEstudiantesLayout);
         AggEstudiantesLayout.setHorizontalGroup(
             AggEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AsignarMaestros1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(AsignarMaestros1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         AggEstudiantesLayout.setVerticalGroup(
             AggEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -778,16 +786,32 @@ public class Gestion extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 153));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 207, Short.MAX_VALUE)
+            .addGap(0, 150, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 526, Short.MAX_VALUE)
+        );
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Pictures\\logo-unitec-color (1).png")); // NOI18N
+
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel2.setPreferredSize(new java.awt.Dimension(5, 0));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -795,26 +819,32 @@ public class Gestion extends javax.swing.JFrame {
         Principal.setLayout(PrincipalLayout);
         PrincipalLayout.setHorizontalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PrincipalLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincipalLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AggProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(AggEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                    .addComponent(AggCurso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(114, 114, 114)
+                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AggEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AggProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AggCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrincipalLayout.createSequentialGroup()
-                .addGap(182, 182, 182)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(AggEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(AggProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(AggCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addComponent(AggCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -825,9 +855,7 @@ public class Gestion extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -901,10 +929,10 @@ public class Gestion extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(Cursos, "Llene todos los campos");
         } else {
 
-            DefaultListModel model = (DefaultListModel) ArbolCursos.getModel();
+            DefaultListModel model = (DefaultListModel) ListasCursos.getModel();
 
             model.addElement(n);
-            ArbolCursos.setModel((TreeModel) model);
+            ListasCursos.setModel(model);
 
             NomCurso.setText("");
             JOptionPane.showMessageDialog(InfoEstudiantes, "El curso se agrego exitosamente.");
@@ -928,7 +956,42 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_AggProfesorMouseClicked
 
     private void Asignar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Asignar1MouseClicked
-        // TODO add your handling code here:
+
+        if (ListaEstudiantes.getSelectedIndex() >= 0) {
+
+            DefaultTreeModel treeModel = (DefaultTreeModel) ArbolEs.getModel();
+
+            Object node = ArbolEs.getLastSelectedPathComponent();
+
+            if (node == null) {
+
+                JOptionPane.showMessageDialog(this, "No se ha seleccionado ningún nodo en el árbol.");
+            } else if (node instanceof DefaultMutableTreeNode) {
+
+                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) node;
+
+                if (selectedNode.getUserObject() instanceof Cursos) {
+
+                    DefaultListModel alumnosListModel = (DefaultListModel) ListaEstudiantes.getModel();
+
+                    Alumnos alumnoSeleccionado = (Alumnos) alumnosListModel.get(ListaEstudiantes.getSelectedIndex());
+
+                    DefaultMutableTreeNode playerNode = new DefaultMutableTreeNode(alumnoSeleccionado);
+                    selectedNode.add(playerNode);
+
+                    treeModel.reload();
+                } else {
+
+                    JOptionPane.showMessageDialog(this, "Seleccione un curso para agregar los estudiantes.");
+                }
+            } else {
+
+                JOptionPane.showMessageDialog(this, "El nodo seleccionado no es del tipo esperado.");
+            }
+        } else {
+            // Mostrar un mensaje de advertencia si no hay ningún estudiante seleccionado en la lista
+            JOptionPane.showMessageDialog(this, "No seleccionó ningún estudiante.");
+        }
     }//GEN-LAST:event_Asignar1MouseClicked
 
     private void Asignar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asignar1ActionPerformed
@@ -966,34 +1029,33 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_GeneroActionPerformed
 
     private void GuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMouseClicked
-        Profesores x = new Profesores();
 
-        if (NProfesor.getText().isEmpty() || Telefono.getText().length() < 8 || Nidentidad2.getText().isEmpty() || EdadPr.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(InfoMaestros, "Asegurese de llenar todos los campos correctamente");
+        if (NProfesor.getText().isEmpty() || Nidentidad2.getText().isEmpty() || EdadPr.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(InfoEstudiantes, "Asegurese de llenar todos los campos");
         } else {
-            int identidad = Integer.parseInt(Nidentidad2.getText());
             int edad = Integer.parseInt(EdadPr.getText());
-            int telefono = Integer.parseInt(Telefono.getText());
+            int identidad = Integer.parseInt(Nidentidad2.getText());
 
-            x.setNombre(NProfesor.getText());
-            x.setIdentidad(identidad);
-            x.setSexo(genero.getSelectedItem().toString());
-            x.setEdad(edad);
-            x.setEstado(Estado.getSelectedItem().toString());
-            x.setTelefono(telefono);
+            if (edad < 1 || edad > 80) {
+                JOptionPane.showMessageDialog(InfoMaestros, "La edad tiene que ser mayor a 0 y menor o igual a 40");
+            } else {
+                Profesores x = new Profesores();
+                x.setNombre(NProfesor.getText());
+                x.setIdentidad(identidad);
+                x.setSexo(genero.getSelectedItem().toString());
+                x.setEdad(edad);
 
-            DefaultListModel model = (DefaultListModel) ListaProfes.getModel();
+                DefaultListModel model = (DefaultListModel) ListaProfes.getModel();
 
-            model.addElement(x);
-            ListaProfes.setModel(model);
+                model.addElement(x);
+                ListaEstudiantes.setModel(model);
 
-            Telefono.setText("");
-            NProfesor.setText("");
-            EdadPr.setText("");
-            genero.setSelectedIndex(0);
-            Nidentidad2.setText("");
-            Estado.setSelectedIndex(0);
-            JOptionPane.showMessageDialog(InfoMaestros, "El Profesor se agrego exitosamente.");
+                NProfesor.setText("");
+                EdadPr.setText("");
+                genero.setSelectedIndex(0);
+                Nidentidad2.setText("");
+                JOptionPane.showMessageDialog(ListaProfes, "El profesor se agrego exitosamente");
+            }
         }
     }//GEN-LAST:event_GuardarMouseClicked
 
@@ -1012,6 +1074,10 @@ public class Gestion extends javax.swing.JFrame {
     private void EdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EdadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EdadActionPerformed
+
+    private void ListaEstudiantesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListaEstudiantesMouseClicked
+
+    }//GEN-LAST:event_ListaEstudiantesMouseClicked
 
     public static void main(String args[]) {
 
@@ -1033,7 +1099,6 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JDialog AggEstudiantes;
     private javax.swing.JDialog AggMaestros;
     private javax.swing.JButton AggProfesor;
-    private javax.swing.JTree ArbolCursos;
     private javax.swing.JTree ArbolEs;
     private javax.swing.JTree ArbonMa;
     private javax.swing.JButton Asignar;
@@ -1058,6 +1123,7 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JPanel InfoProfesores;
     private javax.swing.JList<String> ListaEstudiantes;
     private javax.swing.JList<String> ListaProfes;
+    private javax.swing.JList<String> ListasCursos;
     private javax.swing.JTextField NProfesor;
     private javax.swing.JTextField Nidentida;
     private javax.swing.JTextField Nidentidad2;
@@ -1078,16 +1144,18 @@ public class Gestion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
     private javax.swing.JToolBar jToolBar1;
