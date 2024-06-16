@@ -988,8 +988,8 @@ public class Gestion extends javax.swing.JFrame {
     private void AsignarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AsignarMouseClicked
 
         if (ListaProfes.getSelectedIndex() >= 0) {
-            DefaultTreeModel treeModel = (DefaultTreeModel) ArbolEs.getModel();
-            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) ArbolEs.getLastSelectedPathComponent();
+            DefaultTreeModel treeModel = (DefaultTreeModel) ArbonMa.getModel();
+            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) ArbonMa.getLastSelectedPathComponent();
 
             if (selectedNode != null && selectedNode.getUserObject() instanceof Cursos) {
                 DefaultListModel jugadorListModel = (DefaultListModel) ListaProfes.getModel();
