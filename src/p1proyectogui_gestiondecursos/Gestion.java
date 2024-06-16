@@ -972,39 +972,27 @@ public class Gestion extends javax.swing.JFrame {
     private void AsignarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AsignarMouseClicked
 
         if (ListaProfes.getSelectedIndex() >= 0) {
-
             DefaultTreeModel treeModel = (DefaultTreeModel) ArbonMa.getModel();
+            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) ArbonMa.getLastSelectedPathComponent();
 
-            Object node = ArbonMa.getLastSelectedPathComponent();
+            if (selectedNode != null && selectedNode.getUserObject() instanceof Cursos) {
+                DefaultListModel jugadorListModel = (DefaultListModel) ListaProfes.getModel();
+                String nombre = ((Profesores) jugadorListModel.get(ListaProfes.getSelectedIndex())).getNombre();
+                int identidad = ((Profesores) jugadorListModel.get(ListaProfes.getSelectedIndex())).getIdentidad();
+                int edad = ((Profesores) jugadorListModel.get(ListaProfes.getSelectedIndex())).getEdad();
+                String sexo = ((Profesores) jugadorListModel.get(ListaProfes.getSelectedIndex())).getSexo();
+                String estado = ((Profesores) jugadorListModel.get(ListaProfes.getSelectedIndex())).getEstado();
+                int telefono = ((Profesores) jugadorListModel.get(ListaProfes.getSelectedIndex())).getTelefono();
 
-            if (node == null) {
+                DefaultMutableTreeNode playerNode = new DefaultMutableTreeNode(new Profesores(nombre, identidad, edad, sexo, estado, telefono));
+                selectedNode.add(playerNode);
 
-                JOptionPane.showMessageDialog(this, "No se ha seleccionado ningún nodo en el árbol.");
-            } else if (node instanceof DefaultMutableTreeNode) {
-
-                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) node;
-
-                if (selectedNode.getUserObject() instanceof Cursos) {
-
-                    DefaultListModel alumnosListModel = (DefaultListModel) ListaProfes.getModel();
-
-                    Profesores MaestroSeleccionado = (Profesores) alumnosListModel.get(ListaProfes.getSelectedIndex());
-
-                    DefaultMutableTreeNode playerNode = new DefaultMutableTreeNode(MaestroSeleccionado);
-                    selectedNode.add(playerNode);
-
-                    treeModel.reload();
-                } else {
-
-                    JOptionPane.showMessageDialog(this, "Seleccione un curso para agregar maestro");
-                }
+                treeModel.reload();
             } else {
-
-                JOptionPane.showMessageDialog(this, "El nodo seleccionado no es del tipo esperado.");
+                JOptionPane.showMessageDialog(this, "Seleccione un curso para agregar profesor");
             }
         } else {
-            // Mostrar un mensaje de advertencia si no hay ningún estudiante seleccionado en la lista
-            JOptionPane.showMessageDialog(this, "No seleccionó ningún maestro");
+            JOptionPane.showMessageDialog(this, "No hay profesor seleccionado");
         }
     }//GEN-LAST:event_AsignarMouseClicked
 
@@ -1019,39 +1007,25 @@ public class Gestion extends javax.swing.JFrame {
     private void Asignar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Asignar1MouseClicked
 
         if (ListaEstudiantes.getSelectedIndex() >= 0) {
-
             DefaultTreeModel treeModel = (DefaultTreeModel) ArbolEs.getModel();
+            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) ArbolEs.getLastSelectedPathComponent();
 
-            Object node = ArbolEs.getLastSelectedPathComponent();
+            if (selectedNode != null && selectedNode.getUserObject() instanceof Cursos) {
+                DefaultListModel jugadorListModel = (DefaultListModel) ListaEstudiantes.getModel();
+                String nombre = ((Alumnos) jugadorListModel.get(ListaEstudiantes.getSelectedIndex())).getNombre();
+                String sexo = ((Alumnos) jugadorListModel.get(ListaEstudiantes.getSelectedIndex())).getSexo();
+                int identidad = ((Alumnos) jugadorListModel.get(ListaEstudiantes.getSelectedIndex())).getIdentidad();
+                int edad = ((Alumnos) jugadorListModel.get(ListaEstudiantes.getSelectedIndex())).getEdad();
 
-            if (node == null) {
+                DefaultMutableTreeNode playerNode = new DefaultMutableTreeNode(new Alumnos(nombre, sexo, identidad, edad));
+                selectedNode.add(playerNode);
 
-                JOptionPane.showMessageDialog(this, "No se ha seleccionado ningún nodo en el árbol.");
-            } else if (node instanceof DefaultMutableTreeNode) {
-
-                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) node;
-
-                if (selectedNode.getUserObject() instanceof Cursos) {
-
-                    DefaultListModel alumnosListModel = (DefaultListModel) ListaEstudiantes.getModel();
-
-                    Alumnos alumnoSeleccionado = (Alumnos) alumnosListModel.get(ListaEstudiantes.getSelectedIndex());
-
-                    DefaultMutableTreeNode playerNode = new DefaultMutableTreeNode(alumnoSeleccionado);
-                    selectedNode.add(playerNode);
-
-                    treeModel.reload();
-                } else {
-
-                    JOptionPane.showMessageDialog(this, "Seleccione un curso para agregar los estudiantes.");
-                }
+                treeModel.reload();
             } else {
-
-                JOptionPane.showMessageDialog(this, "El nodo seleccionado no es del tipo esperado.");
+                JOptionPane.showMessageDialog(this, "Seleccione un equipo para agregar jugadores.");
             }
         } else {
-            // Mostrar un mensaje de advertencia si no hay ningún estudiante seleccionado en la lista
-            JOptionPane.showMessageDialog(this, "No seleccionó ningún estudiante.");
+            JOptionPane.showMessageDialog(this, "No hay jugador seleccionado.");
         }
     }//GEN-LAST:event_Asignar1MouseClicked
 
@@ -1092,19 +1066,19 @@ public class Gestion extends javax.swing.JFrame {
     private void GuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMouseClicked
 
         if (NProfesor.getText().isEmpty() || Nidentidad2.getText().isEmpty() || EdadPr.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(InfoEstudiantes, "Asegurese de llenar todos los campos");
+            JOptionPane.showMessageDialog(InfoProfesores, "Asegurese de llenar todos los campos");
         } else {
             int edad = Integer.parseInt(EdadPr.getText());
             int identidad = Integer.parseInt(Nidentidad2.getText());
 
             if (edad < 1 || edad > 80) {
-                JOptionPane.showMessageDialog(InfoMaestros, "La edad tiene que ser mayor a 0 y menor o igual a 40");
+                JOptionPane.showMessageDialog(InfoProfesores, "La edad tiene que ser mayor a 0 y menor o igual a 40");
             } else {
                 Profesores x = new Profesores();
                 x.setNombre(NProfesor.getText());
                 x.setIdentidad(identidad);
                 x.setEdad(edad);
-                x.setSexo(genero.getSelectedItem().toString());
+                x.setSexo(Genero.getSelectedItem().toString());
 
                 DefaultListModel model = (DefaultListModel) ListaProfes.getModel();
 
@@ -1112,10 +1086,13 @@ public class Gestion extends javax.swing.JFrame {
                 ListaProfes.setModel(model);
 
                 NProfesor.setText("");
+                Nidentida.setText("");
                 EdadPr.setText("");
-                genero.setSelectedIndex(0);
-                Nidentidad2.setText("");
-                JOptionPane.showMessageDialog(InfoMaestros, "El profesor se agrego exitosamente");
+                Genero.setSelectedIndex(0);
+                Estado.setSelectedItem(0);
+                Telefono.setText("");
+
+                JOptionPane.showMessageDialog(InfoProfesores, "El Estudiante se agrego exitosamente");
             }
         }
     }//GEN-LAST:event_GuardarMouseClicked
