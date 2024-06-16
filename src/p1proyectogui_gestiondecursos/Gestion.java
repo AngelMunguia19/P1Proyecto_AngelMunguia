@@ -941,10 +941,10 @@ public class Gestion extends javax.swing.JFrame {
         //Arbolll
         DefaultTreeModel treeModel = (DefaultTreeModel) this.ArbolEs.getModel();
         DefaultMutableTreeNode rootNode = (DefaultMutableTreeNode) treeModel.getRoot();
-        
+
         String Cursos2 = NomCurso.getText();
-        
-        DefaultMutableTreeNode NodoCursos = null; 
+
+        DefaultMutableTreeNode NodoCursos = null;
         for (int i = 0; i < rootNode.getChildCount(); i++) {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) rootNode.getChildAt(i);
             if (node.getUserObject().equals(Cursos2)) {
@@ -961,7 +961,7 @@ public class Gestion extends javax.swing.JFrame {
         NodoCursos.add(teamNode);
 
         treeModel.reload();
-        
+
         NomCurso.setText("");
     }//GEN-LAST:event_Guardar3MouseClicked
 
@@ -970,7 +970,7 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_Guardar3ActionPerformed
 
     private void AsignarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AsignarMouseClicked
-        
+
         if (ListaProfes.getSelectedIndex() >= 0) {
 
             DefaultTreeModel treeModel = (DefaultTreeModel) ArbonMa.getModel();
@@ -1103,19 +1103,19 @@ public class Gestion extends javax.swing.JFrame {
                 Profesores x = new Profesores();
                 x.setNombre(NProfesor.getText());
                 x.setIdentidad(identidad);
-                x.setSexo(genero.getSelectedItem().toString());
                 x.setEdad(edad);
+                x.setSexo(genero.getSelectedItem().toString());
 
                 DefaultListModel model = (DefaultListModel) ListaProfes.getModel();
 
                 model.addElement(x);
-                ListaEstudiantes.setModel(model);
+                ListaProfes.setModel(model);
 
                 NProfesor.setText("");
                 EdadPr.setText("");
                 genero.setSelectedIndex(0);
                 Nidentidad2.setText("");
-                JOptionPane.showMessageDialog(ListaProfes, "El profesor se agrego exitosamente");
+                JOptionPane.showMessageDialog(InfoMaestros, "El profesor se agrego exitosamente");
             }
         }
     }//GEN-LAST:event_GuardarMouseClicked
