@@ -693,7 +693,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setText("Asignar Estudiantes");
 
-        ArbolEs.setBackground(new java.awt.Color(0, 0, 0));
+        ArbolEs.setBackground(new java.awt.Color(204, 204, 204));
         ArbolEs.setForeground(new java.awt.Color(0, 0, 0));
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Cursos");
         ArbolEs.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
@@ -970,7 +970,42 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_Guardar3ActionPerformed
 
     private void AsignarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AsignarMouseClicked
-        // TODO add your handling code here:
+        
+        if (ListaProfes.getSelectedIndex() >= 0) {
+
+            DefaultTreeModel treeModel = (DefaultTreeModel) ArbonMa.getModel();
+
+            Object node = ArbonMa.getLastSelectedPathComponent();
+
+            if (node == null) {
+
+                JOptionPane.showMessageDialog(this, "No se ha seleccionado ningún nodo en el árbol.");
+            } else if (node instanceof DefaultMutableTreeNode) {
+
+                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) node;
+
+                if (selectedNode.getUserObject() instanceof Cursos) {
+
+                    DefaultListModel alumnosListModel = (DefaultListModel) ListaProfes.getModel();
+
+                    Profesores MaestroSeleccionado = (Profesores) alumnosListModel.get(ListaProfes.getSelectedIndex());
+
+                    DefaultMutableTreeNode playerNode = new DefaultMutableTreeNode(MaestroSeleccionado);
+                    selectedNode.add(playerNode);
+
+                    treeModel.reload();
+                } else {
+
+                    JOptionPane.showMessageDialog(this, "Seleccione un curso para agregar maestro");
+                }
+            } else {
+
+                JOptionPane.showMessageDialog(this, "El nodo seleccionado no es del tipo esperado.");
+            }
+        } else {
+            // Mostrar un mensaje de advertencia si no hay ningún estudiante seleccionado en la lista
+            JOptionPane.showMessageDialog(this, "No seleccionó ningún maestro");
+        }
     }//GEN-LAST:event_AsignarMouseClicked
 
     private void AsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsignarActionPerformed
