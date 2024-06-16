@@ -884,21 +884,30 @@ public class Gestion extends javax.swing.JFrame {
     private void Guardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar2ActionPerformed
 
     }//GEN-LAST:event_Guardar2ActionPerformed
-
+    public boolean validateIdentity(String identity) {
+        if (identity.length() < 8) {
+            return false;
+        } else if (identity.length() == 8) {
+            return true;
+        } else {
+            return validateIdentity(identity.substring(1));
+        }
+    }
     private void Guardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar2MouseClicked
 
         if (NomEstudiante.getText().isEmpty() || Nidentida.getText().isEmpty() || Edad.getText().isEmpty()) {
             JOptionPane.showMessageDialog(InfoEstudiantes, "Asegurese de llenar todos los campos");
         } else {
             int edad = Integer.parseInt(Edad.getText());
-            int identidad = Integer.parseInt(Nidentida.getText());
 
             if (edad < 1 || edad > 80) {
                 JOptionPane.showMessageDialog(InfoEstudiantes, "La edad tiene que ser mayor a 0 y menor o igual a 40");
+            } else if (!validateIdentity(Nidentida.getText())) {
+                JOptionPane.showMessageDialog(InfoEstudiantes, "La identidad debe tener 8 digitos o mas");
             } else {
                 Alumnos x = new Alumnos();
                 x.setNombre(NomEstudiante.getText());
-                x.setIdentidad(identidad);
+                x.setIdentidad(Integer.parseInt(Nidentida.getText()));
                 x.setSexo(Genero.getSelectedItem().toString());
                 x.setEdad(edad);
 
