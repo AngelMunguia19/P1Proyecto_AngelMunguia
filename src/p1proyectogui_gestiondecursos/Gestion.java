@@ -926,27 +926,50 @@ public class Gestion extends javax.swing.JFrame {
         //////uwu////////
         DefaultTreeModel treeModel = (DefaultTreeModel) this.ArbolEs.getModel();
         DefaultMutableTreeNode rootNode = (DefaultMutableTreeNode) treeModel.getRoot();
+        ///Maestros
+        DefaultTreeModel model1 = (DefaultTreeModel) this.ArbonMa.getModel();
+        DefaultMutableTreeNode mestronode = (DefaultMutableTreeNode) model1.getRoot();
 
+        
         String nombre = NomCurso.getText();
-
-        DefaultMutableTreeNode NodoCursos = null;
+        DefaultMutableTreeNode NodoAlumnos = null;
         for (int i = 0; i < rootNode.getChildCount(); i++) {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) rootNode.getChildAt(i);
             if (node.getUserObject().equals(nombre)) {
-                NodoCursos = node;
+                NodoAlumnos = node;
+                break;
+            }
+        }
+        
+        DefaultMutableTreeNode nodomestros = null;
+        for (int i = 0; i < mestronode.getChildCount(); i++) {
+            DefaultMutableTreeNode node = (DefaultMutableTreeNode) mestronode.getChildAt(i);
+            if (node.getUserObject().equals(nombre)) {
+                nodomestros = node;
                 break;
             }
         }
 
-        if (NodoCursos == null) {
-            NodoCursos = new DefaultMutableTreeNode(nombre);
-            rootNode.add(NodoCursos);
+        if (NodoAlumnos == null) {
+            NodoAlumnos = new DefaultMutableTreeNode(nombre);
+            rootNode.add(NodoAlumnos);
             treeModel.reload();
         }
         DefaultMutableTreeNode teamNode = new DefaultMutableTreeNode(new Cursos(nombre));
-        NodoCursos.add(teamNode);
+        NodoAlumnos.add(teamNode);
 
         treeModel.reload();
+        
+        //Maestros
+        if (nodomestros == null) {
+            nodomestros = new DefaultMutableTreeNode(nombre);
+            mestronode.add(nodomestros);
+            model1.reload();
+        }
+        DefaultMutableTreeNode Profes = new DefaultMutableTreeNode(new Cursos(nombre));
+        nodomestros.add(Profes);
+
+        model1.reload();
 
         NomCurso.setText("");
 
@@ -1010,10 +1033,10 @@ public class Gestion extends javax.swing.JFrame {
 
                 treeModel.reload();
             } else {
-                JOptionPane.showMessageDialog(this, "Seleccione un equipo para agregar jugadores.");
+                JOptionPane.showMessageDialog(this, "El estudiante se agrego existosamente");
             }
         } else {
-            JOptionPane.showMessageDialog(this, "No hay jugador seleccionado.");
+            JOptionPane.showMessageDialog(this, "No hay jugador seleccionado");
         }
     }//GEN-LAST:event_Asignar1MouseClicked
 
