@@ -693,7 +693,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setText("Asignar Estudiantes");
 
-        ArbolEs.setBackground(new java.awt.Color(204, 204, 204));
+        ArbolEs.setBackground(new java.awt.Color(0, 0, 0));
         ArbolEs.setForeground(new java.awt.Color(0, 0, 0));
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Cursos");
         ArbolEs.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
@@ -802,13 +802,13 @@ public class Gestion extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Pictures\\logo-unitec-color (1).png")); // NOI18N
 
         jPanel2.setBackground(new java.awt.Color(204, 0, 0));
-        jPanel2.setPreferredSize(new java.awt.Dimension(5, 0));
+        jPanel2.setPreferredSize(new java.awt.Dimension(4, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
+            .addGap(0, 4, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -821,7 +821,7 @@ public class Gestion extends javax.swing.JFrame {
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincipalLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(114, 114, 114)
                 .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -829,7 +829,7 @@ public class Gestion extends javax.swing.JFrame {
                     .addComponent(AggEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AggProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AggCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -851,7 +851,7 @@ public class Gestion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Principal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -936,7 +936,33 @@ public class Gestion extends javax.swing.JFrame {
 
             NomCurso.setText("");
             JOptionPane.showMessageDialog(InfoEstudiantes, "El curso se agrego exitosamente.");
+
         }
+        //Arbolll
+        DefaultTreeModel treeModel = (DefaultTreeModel) this.ArbolEs.getModel();
+        DefaultMutableTreeNode rootNode = (DefaultMutableTreeNode) treeModel.getRoot();
+        
+        String Cursos2 = NomCurso.getText();
+        
+        DefaultMutableTreeNode NodoCursos = null; 
+        for (int i = 0; i < rootNode.getChildCount(); i++) {
+            DefaultMutableTreeNode node = (DefaultMutableTreeNode) rootNode.getChildAt(i);
+            if (node.getUserObject().equals(Cursos2)) {
+                NodoCursos = node;
+                break;
+            }
+        }
+        if (NodoCursos == null) {
+            NodoCursos = new DefaultMutableTreeNode(Cursos2);
+            rootNode.add(NodoCursos);
+            treeModel.reload();
+        }
+        DefaultMutableTreeNode teamNode = new DefaultMutableTreeNode(new Cursos(Cursos2));
+        NodoCursos.add(teamNode);
+
+        treeModel.reload();
+        
+        NomCurso.setText("");
     }//GEN-LAST:event_Guardar3MouseClicked
 
     private void Guardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar3ActionPerformed

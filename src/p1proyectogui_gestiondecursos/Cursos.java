@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Usuario
  */
 public class Cursos {
-    private String cursos;
+    public String cursos;
 
     public Cursos() {
     }
