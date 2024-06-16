@@ -923,46 +923,34 @@ public class Gestion extends javax.swing.JFrame {
     }//GEN-LAST:event_AggCursoActionPerformed
 
     private void Guardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar3MouseClicked
-        Cursos n = new Cursos();
-        n.setCursos(NomCurso.getText());
-        if (NomCurso.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(Cursos, "Llene todos los campos");
-        } else {
-
-            DefaultListModel model = (DefaultListModel) ListasCursos.getModel();
-
-            model.addElement(n);
-            ListasCursos.setModel(model);
-
-            NomCurso.setText("");
-            JOptionPane.showMessageDialog(InfoEstudiantes, "El curso se agrego exitosamente.");
-
-        }
-        //Arbolll
+        //////uwu////////
         DefaultTreeModel treeModel = (DefaultTreeModel) this.ArbolEs.getModel();
         DefaultMutableTreeNode rootNode = (DefaultMutableTreeNode) treeModel.getRoot();
 
-        String Cursos2 = NomCurso.getText();
+        String nombre = NomCurso.getText();
 
         DefaultMutableTreeNode NodoCursos = null;
         for (int i = 0; i < rootNode.getChildCount(); i++) {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) rootNode.getChildAt(i);
-            if (node.getUserObject().equals(Cursos2)) {
+            if (node.getUserObject().equals(nombre)) {
                 NodoCursos = node;
                 break;
             }
         }
+
         if (NodoCursos == null) {
-            NodoCursos = new DefaultMutableTreeNode(Cursos2);
+            NodoCursos = new DefaultMutableTreeNode(nombre);
             rootNode.add(NodoCursos);
             treeModel.reload();
         }
-        DefaultMutableTreeNode teamNode = new DefaultMutableTreeNode(new Cursos(Cursos2));
+        DefaultMutableTreeNode teamNode = new DefaultMutableTreeNode(new Cursos(nombre));
         NodoCursos.add(teamNode);
 
         treeModel.reload();
 
         NomCurso.setText("");
+
+        JOptionPane.showMessageDialog(AggCursos, "Curso creado exitosamente.");
     }//GEN-LAST:event_Guardar3MouseClicked
 
     private void Guardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar3ActionPerformed
@@ -972,8 +960,8 @@ public class Gestion extends javax.swing.JFrame {
     private void AsignarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AsignarMouseClicked
 
         if (ListaProfes.getSelectedIndex() >= 0) {
-            DefaultTreeModel treeModel = (DefaultTreeModel) ArbonMa.getModel();
-            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) ArbonMa.getLastSelectedPathComponent();
+            DefaultTreeModel treeModel = (DefaultTreeModel) ArbolEs.getModel();
+            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) ArbolEs.getLastSelectedPathComponent();
 
             if (selectedNode != null && selectedNode.getUserObject() instanceof Cursos) {
                 DefaultListModel jugadorListModel = (DefaultListModel) ListaProfes.getModel();
@@ -1092,7 +1080,7 @@ public class Gestion extends javax.swing.JFrame {
                 Estado.setSelectedItem(0);
                 Telefono.setText("");
 
-                JOptionPane.showMessageDialog(InfoProfesores, "El Estudiante se agrego exitosamente");
+                JOptionPane.showMessageDialog(InfoProfesores, "El Profesor se agrego exitosamente");
             }
         }
     }//GEN-LAST:event_GuardarMouseClicked
