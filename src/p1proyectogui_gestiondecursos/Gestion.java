@@ -930,7 +930,12 @@ public class Gestion extends javax.swing.JFrame {
         DefaultTreeModel model1 = (DefaultTreeModel) this.ArbonMa.getModel();
         DefaultMutableTreeNode mestronode = (DefaultMutableTreeNode) model1.getRoot();
 
-        
+        ///Lista de cursos
+        DefaultListModel model = (DefaultListModel) ListasCursos.getModel();
+        model.addElement(new Cursos(NomCurso.getText()));
+
+        ListaEstudiantes.setModel(model);
+
         String nombre = NomCurso.getText();
         DefaultMutableTreeNode NodoAlumnos = null;
         for (int i = 0; i < rootNode.getChildCount(); i++) {
@@ -940,7 +945,7 @@ public class Gestion extends javax.swing.JFrame {
                 break;
             }
         }
-        
+
         DefaultMutableTreeNode nodomestros = null;
         for (int i = 0; i < mestronode.getChildCount(); i++) {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) mestronode.getChildAt(i);
@@ -959,7 +964,7 @@ public class Gestion extends javax.swing.JFrame {
         NodoAlumnos.add(teamNode);
 
         treeModel.reload();
-        
+
         //Maestros
         if (nodomestros == null) {
             nodomestros = new DefaultMutableTreeNode(nombre);
