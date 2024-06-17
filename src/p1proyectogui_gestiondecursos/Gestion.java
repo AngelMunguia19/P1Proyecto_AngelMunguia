@@ -134,8 +134,6 @@ public class Gestion extends javax.swing.JFrame {
         Edad.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Edad.setForeground(new java.awt.Color(0, 0, 0));
         Edad.setCaretColor(new java.awt.Color(0, 0, 255));
-        Edad.setSelectedTextColor(new java.awt.Color(255, 0, 0));
-        Edad.setSelectionColor(new java.awt.Color(255, 0, 0));
         Edad.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 EdadMouseClicked(evt);
@@ -405,13 +403,14 @@ public class Gestion extends javax.swing.JFrame {
         InfoEtudiantes3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel19.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel19.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Eras Demi ITC", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Nombre de el Curso");
 
         NomCurso.setBackground(new java.awt.Color(204, 204, 204));
         NomCurso.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         NomCurso.setForeground(new java.awt.Color(0, 0, 0));
+        NomCurso.setCaretColor(new java.awt.Color(0, 0, 255));
 
         Guardar3.setBackground(new java.awt.Color(0, 0, 153));
         Guardar3.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
@@ -430,10 +429,11 @@ public class Gestion extends javax.swing.JFrame {
         });
 
         jToolBar1.setBackground(new java.awt.Color(204, 204, 204));
+        jToolBar1.setForeground(new java.awt.Color(255, 0, 0));
         jToolBar1.setRollover(true);
 
         jButton7.setBackground(new java.awt.Color(204, 204, 204));
-        jButton7.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Lista de cursos");
         jButton7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -466,7 +466,7 @@ public class Gestion extends javax.swing.JFrame {
                         .addGap(119, 119, 119)
                         .addComponent(NomCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(InfoEtudiantes3Layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
+                        .addGap(166, 166, 166)
                         .addComponent(jLabel19)))
                 .addContainerGap(154, Short.MAX_VALUE))
         );
@@ -477,8 +477,8 @@ public class Gestion extends javax.swing.JFrame {
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(NomCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NomCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Guardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(92, Short.MAX_VALUE))
@@ -488,9 +488,7 @@ public class Gestion extends javax.swing.JFrame {
         AggCursos.getContentPane().setLayout(AggCursosLayout);
         AggCursosLayout.setHorizontalGroup(
             AggCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AggCursosLayout.createSequentialGroup()
-                .addComponent(InfoEtudiantes3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(InfoEtudiantes3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         AggCursosLayout.setVerticalGroup(
             AggCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -952,7 +950,7 @@ public class Gestion extends javax.swing.JFrame {
         DefaultListModel model = (DefaultListModel) ListasCursos.getModel();
         model.addElement(new Cursos(NomCurso.getText()));
 
-        ListaEstudiantes.setModel(model);
+        ListasCursos.setModel(model);
 
         String nombre = NomCurso.getText();
         DefaultMutableTreeNode NodoAlumnos = null;
