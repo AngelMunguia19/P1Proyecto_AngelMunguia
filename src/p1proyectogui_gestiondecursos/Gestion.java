@@ -884,15 +884,7 @@ public class Gestion extends javax.swing.JFrame {
     private void Guardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Guardar2ActionPerformed
 
     }//GEN-LAST:event_Guardar2ActionPerformed
-    public boolean validateIdentity(String identity) {
-        if (identity.length() < 8) {
-            return false;
-        } else if (identity.length() == 8) {
-            return true;
-        } else {
-            return validateIdentity(identity.substring(1));
-        }
-    }
+
     private void Guardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar2MouseClicked
 
         if (NomEstudiante.getText().isEmpty() || Nidentida.getText().isEmpty() || Edad.getText().isEmpty()) {
@@ -924,7 +916,15 @@ public class Gestion extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_Guardar2MouseClicked
-
+    public boolean validateIdentity(String identity) {
+        if (identity.length() < 8) {
+            return false;
+        } else if (identity.length() == 8) {
+            return true;
+        } else {
+            return validateIdentity(identity.substring(1));
+        }
+    }
     private void AggCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AggCursoActionPerformed
         AggCursos.pack();
         AggCursos.setVisible(true);
@@ -1098,6 +1098,8 @@ public class Gestion extends javax.swing.JFrame {
 
             if (edad < 1 || edad > 80) {
                 JOptionPane.showMessageDialog(InfoProfesores, "La edad tiene que ser mayor a 0 y menor o igual a 40");
+            } else if (!validateIdentity(Nidentidad2.getText())) {
+                JOptionPane.showMessageDialog(InfoProfesores, "La identidad debe tener 8 digitos o mas");
             } else {
                 Profesores x = new Profesores();
                 x.setNombre(NProfesor.getText());
@@ -1111,7 +1113,7 @@ public class Gestion extends javax.swing.JFrame {
                 ListaProfes.setModel(model);
 
                 NProfesor.setText("");
-                Nidentida.setText("");
+                Nidentidad2.setText("");
                 EdadPr.setText("");
                 Genero.setSelectedIndex(0);
                 Estado.setSelectedItem(0);
