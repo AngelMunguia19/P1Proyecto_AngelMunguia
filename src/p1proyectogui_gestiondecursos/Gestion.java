@@ -113,6 +113,7 @@ public class Gestion extends javax.swing.JFrame {
         NomEstudiante.setBackground(new java.awt.Color(204, 204, 204));
         NomEstudiante.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         NomEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        NomEstudiante.setCaretColor(new java.awt.Color(0, 0, 255));
 
         jLabel16.setBackground(new java.awt.Color(255, 255, 255));
         jLabel16.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -122,6 +123,7 @@ public class Gestion extends javax.swing.JFrame {
         Nidentida.setBackground(new java.awt.Color(204, 204, 204));
         Nidentida.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Nidentida.setForeground(new java.awt.Color(0, 0, 0));
+        Nidentida.setCaretColor(new java.awt.Color(0, 51, 255));
 
         jLabel17.setBackground(new java.awt.Color(255, 255, 255));
         jLabel17.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -131,6 +133,9 @@ public class Gestion extends javax.swing.JFrame {
         Edad.setBackground(new java.awt.Color(204, 204, 204));
         Edad.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Edad.setForeground(new java.awt.Color(0, 0, 0));
+        Edad.setCaretColor(new java.awt.Color(0, 0, 255));
+        Edad.setSelectedTextColor(new java.awt.Color(255, 0, 0));
+        Edad.setSelectionColor(new java.awt.Color(255, 0, 0));
         Edad.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 EdadMouseClicked(evt);
@@ -147,7 +152,7 @@ public class Gestion extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Sexo");
 
-        Guardar2.setBackground(new java.awt.Color(0, 0, 102));
+        Guardar2.setBackground(new java.awt.Color(0, 0, 153));
         Guardar2.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
         Guardar2.setForeground(new java.awt.Color(255, 255, 255));
         Guardar2.setText("Guardar");
@@ -241,6 +246,7 @@ public class Gestion extends javax.swing.JFrame {
         NProfesor.setBackground(new java.awt.Color(204, 204, 204));
         NProfesor.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         NProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        NProfesor.setCaretColor(new java.awt.Color(0, 0, 255));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -250,6 +256,7 @@ public class Gestion extends javax.swing.JFrame {
         Nidentidad2.setBackground(new java.awt.Color(204, 204, 204));
         Nidentidad2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Nidentidad2.setForeground(new java.awt.Color(0, 0, 0));
+        Nidentidad2.setCaretColor(new java.awt.Color(0, 0, 255));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
@@ -259,6 +266,7 @@ public class Gestion extends javax.swing.JFrame {
         EdadPr.setBackground(new java.awt.Color(204, 204, 204));
         EdadPr.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         EdadPr.setForeground(new java.awt.Color(0, 0, 0));
+        EdadPr.setCaretColor(new java.awt.Color(0, 0, 255));
         EdadPr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EdadPrActionPerformed(evt);
@@ -272,7 +280,7 @@ public class Gestion extends javax.swing.JFrame {
 
         Guardar.setBackground(new java.awt.Color(0, 0, 153));
         Guardar.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
-        Guardar.setForeground(new java.awt.Color(204, 204, 204));
+        Guardar.setForeground(new java.awt.Color(255, 255, 255));
         Guardar.setText("Guardar");
         Guardar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 255)));
         Guardar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -299,6 +307,7 @@ public class Gestion extends javax.swing.JFrame {
         Telefono.setBackground(new java.awt.Color(204, 204, 204));
         Telefono.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 14)); // NOI18N
         Telefono.setForeground(new java.awt.Color(0, 0, 0));
+        Telefono.setCaretColor(new java.awt.Color(0, 0, 255));
         Telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoActionPerformed(evt);
